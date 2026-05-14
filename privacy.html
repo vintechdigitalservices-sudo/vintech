@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-5V5S8TT3');</script>
+<!-- End Google Tag Manager -->
+
+<!-- Favicon -->
+<link rel="icon" type="image/png" sizes="30x36" href="logo1.png">
+<link rel="apple-touch-icon" sizes="250x250" href="logo1.png">
+
+<title>Privacy Policy - Vintech Digital Services</title>
+<meta name="description" content="Privacy Policy for Vintech Digital Services. Learn how we collect, use, and protect your personal information when you use our website and services.">
+<meta name="robots" content="index, follow">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+<style>
+  :root {
+    --navy: #001F54;
+    --orange: #e67e22;
+    --white: #ffffff;
+    --muted: #f4f4f9;
+    --text: #222;
+    --maxw: 1200px;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Inter', Arial, sans-serif; color: var(--text); background: var(--white); line-height: 1.6; overflow-x: hidden; }
+  a { text-decoration: none; color: inherit; }
+  img { max-width: 100%; display: block; }
+
+  .wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 18px; }
+
+  /* Header */
+  header { position: fixed; top: 0; width: 100%; background: rgba(255, 255, 255, 0.98); padding: 5px 5%; display: flex; justify-content: space-between; align-items: center; z-index: 1000; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); }
+  .logo img { height: 56px; width: auto; }
+  .nav-menu { display: flex; list-style: none; gap: 25px; align-items: center; }
+  .nav-menu a { text-decoration: none; color: #475569; font-weight: 500; font-size: 0.95rem; transition: color 0.3s; }
+  .nav-menu a:hover { color: var(--orange); }
+  .btn-contact { background: var(--orange); color: #fff !important; padding: 8px 20px; border-radius: 4px; }
+  .mobile-toggle { display: none; flex-direction: column; gap: 5px; cursor: pointer; z-index: 1001; }
+  .mobile-toggle span { width: 25px; height: 3px; background: #001F54; border-radius: 2px; transition: 0.3s; }
+
+  /* Mobile Drawer Navigation */
+  .nav-drawer {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 85%;
+    max-width: 320px;
+    height: 100%;
+    background: #001F54;
+    z-index: 1002;
+    transition: right 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    padding: 30px 25px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: -5px 0 30px rgba(0, 0, 0, 0.3);
+  }
+  .nav-drawer.open { right: 0; }
+  .drawer-header { display: flex; justify-content: flex-end; margin-bottom: 40px; }
+  .drawer-close {
+    background: rgba(255,255,255,0.1);
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background 0.3s;
+    color: white;
+    font-size: 1.2rem;
+  }
+  .drawer-close:hover { background: var(--orange); }
+  .drawer-logo { text-align: center; margin-bottom: 40px; }
+  .drawer-logo img { height: 60px; width: auto; }
+  .drawer-nav { flex: 1; }
+  .drawer-nav ul { list-style: none; padding: 0; }
+  .drawer-nav li { margin-bottom: 25px; }
+  .drawer-nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 500;
+    display: block;
+    padding: 8px 0;
+    transition: color 0.3s, transform 0.2s;
+  }
+  .drawer-nav a:hover { color: var(--orange); transform: translateX(5px); }
+  .drawer-contact { margin-top: auto; padding-top: 30px; border-top: 1px solid rgba(255,255,255,0.1); }
+  .drawer-contact .drawer-btn {
+    display: block;
+    background: var(--orange);
+    color: #ffffff;
+    text-align: center;
+    padding: 14px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background 0.3s;
+  }
+  .drawer-contact .drawer-btn:hover { background: #d35400; }
+  .drawer-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1001;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+  }
+  .drawer-overlay.active { opacity: 1; visibility: visible; }
+
+  /* Page Hero */
+  .page-hero { background: linear-gradient(135deg, var(--navy) 0%, #00308F 100%); color: var(--white); padding: 120px 0 60px; text-align: center; margin-top: 70px; }
+  .page-hero h1 { font-size: 2.5rem; margin-bottom: 16px; }
+  .page-hero p { font-size: 1.1rem; max-width: 600px; margin: 0 auto; opacity: 0.9; }
+
+  /* Privacy Policy Content */
+  .privacy-content { padding: 60px 0; }
+  .privacy-section { margin-bottom: 40px; }
+  .privacy-section h2 { color: var(--navy); margin-bottom: 20px; font-size: 1.8rem; border-bottom: 2px solid var(--orange); padding-bottom: 8px; }
+  .privacy-section h3 { color: var(--navy); margin: 25px 0 15px; font-size: 1.3rem; }
+  .privacy-section p { margin-bottom: 16px; color: #444; }
+  .privacy-section ul { margin: 16px 0; padding-left: 24px; }
+  .privacy-section li { margin-bottom: 8px; color: #444; }
+
+  /* Last Updated */
+  .last-updated { background: var(--muted); padding: 20px; border-radius: 8px; margin-bottom: 30px; text-align: center; }
+  .last-updated strong { color: var(--orange); }
+
+  /* Contact Box */
+  .contact-box { background: var(--muted); padding: 30px; border-radius: 12px; margin-top: 40px; text-align: center; }
+  .contact-box h3 { color: var(--navy); margin-bottom: 16px; }
+
+  /* Buttons */
+  .btn { display: inline-block; padding: 12px 28px; border-radius: 8px; font-weight: 600; text-align: center; cursor: pointer; transition: all 0.3s ease; font-size: 1rem; }
+  .btn-primary { background: var(--orange); color: var(--white); border: none; }
+  .btn-primary:hover { background: #d35400; transform: translateY(-2px); }
+
+  /* Footer */
+  footer { background: #001338; color: #ffffff; padding: 60px 5% 30px; }
+  .footer-wrap { max-width: var(--maxw); margin: 0 auto; display: grid; grid-template-columns: repeat(4, 1fr); gap: 50px; }
+  .nav-logo { display: flex; align-items: center; gap: 10px; margin-bottom: 20px; }
+  .nav-logo img { height: 45px; width: auto; }
+  .nav-logo span { font-size: 1.3rem; font-weight: 700; }
+  .col p { font-size: 0.9rem; line-height: 1.6; opacity: 0.85; margin-bottom: 12px; }
+  .col p i { width: 25px; color: var(--orange); }
+  .col p a { color: #ffffff; text-decoration: none; }
+  .col h4 { font-size: 1rem; font-weight: 700; margin-bottom: 20px; color: var(--orange); }
+  .col a { display: block; color: #ffffff; text-decoration: none; margin-bottom: 12px; font-size: 0.9rem; opacity: 0.8; transition: all 0.3s; }
+  .col a:hover { opacity: 1; transform: translateX(5px); }
+  .service-list p { margin-bottom: 8px; font-size: 0.9rem; opacity: 0.8; }
+  .service-list p:hover { opacity: 1; }
+  .social-icons { display: flex; gap: 15px; margin-top: 15px; justify-content: center; }
+  .social-icons a { width: 40px; height: 40px; background: rgba(255,255,255,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0; transition: all 0.3s; }
+  .social-icons a i { font-size: 1.2rem; }
+  .social-icons a:hover { background: var(--orange); transform: translateY(-3px); }
+  .footer-bottom { max-width: var(--maxw); margin: 40px auto 0; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.1); display: flex; justify-content: center; align-items: center; flex-direction: column; gap: 10px; text-align: center; }
+  .legal-links { display: flex; gap: 18px; justify-content: center; }
+  .legal-links a { font-size: 0.8rem; color: #ffffff; opacity: 0.7; text-decoration: none; }
+  .legal-links a:hover { opacity: 1; }
+  .copyright { font-size: 0.8rem; opacity: 0.7; text-align: center; }
+
+  /* Floating CTA */
+  #global-cta {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 9999;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: flex-end;
+    gap: 12px;
+  }
+  #cta-main {
+    width: 60px;
+    height: 60px;
+    background: var(--orange);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 4px 20px rgba(230,126,34,0.5);
+    transition: all 0.3s ease;
+    position: relative;
+  }
+  #cta-main i { font-size: 28px; color: #ffffff; }
+  #cta-main:hover { transform: scale(1.1); box-shadow: 0 6px 25px rgba(230,126,34,0.6); }
+  .ringing { animation: ring 1.5s ease infinite; }
+  @keyframes ring {
+    0% { transform: rotate(0) scale(1); }
+    25% { transform: rotate(10deg) scale(1.05); }
+    50% { transform: rotate(-10deg) scale(1.05); }
+    75% { transform: rotate(5deg) scale(1.02); }
+    100% { transform: rotate(0) scale(1); }
+  }
+  #cta-main::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    border-radius: 50%;
+    background: rgba(230,126,34,0.4);
+    z-index: -1;
+    animation: glow 2s ease infinite;
+  }
+  @keyframes glow {
+    0% { opacity: 0.3; transform: scale(1); }
+    50% { opacity: 0.6; transform: scale(1.1); }
+    100% { opacity: 0.3; transform: scale(1); }
+  }
+  #cta-options {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  .cta-option {
+    background: #001338;
+    color: #fff;
+    padding: 12px 18px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 600;
+    white-space: nowrap;
+    transition: all 0.3s;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+  }
+  .cta-option:hover {
+    background: var(--orange);
+    color: #001338;
+    transform: translateX(-5px);
+  }
+
+  @media (max-width: 768px) {
+    .mobile-toggle { display: flex; }
+    .nav-menu { display: none; }
+    .page-hero { margin-top: 70px; padding: 100px 0 50px; }
+    .page-hero h1 { font-size: 2rem; }
+    .footer-wrap { grid-template-columns: 1fr; text-align: center; }
+    .nav-logo { justify-content: center; }
+    .social-icons { justify-content: center; }
+    .footer-bottom { flex-direction: column; align-items: center; }
+    .legal-links { justify-content: center; }
+  }
+</style>
+</head>
+<body>
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5V5S8TT3"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<!-- Drawer Overlay -->
+<div class="drawer-overlay" id="drawerOverlay"></div>
+
+<!-- Mobile Drawer Navigation -->
+<div class="nav-drawer" id="navDrawer">
+    <div class="drawer-header">
+        <button class="drawer-close" id="drawerClose"><i class="fas fa-times"></i></button>
+    </div>
+    <div class="drawer-logo">
+        <img src="logo.png" alt="Vintech Digital Services">
+    </div>
+    <div class="drawer-nav">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="blogs.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+    <div class="drawer-contact">
+        <a href="contact.html" class="drawer-btn">Get a Quote</a>
+    </div>
+</div>
+
+<!-- HEADER -->
+<header>
+    <div class="logo">
+        <img src="logo.png" alt="Vintech Digital Services Logo">
+    </div>
+    <nav>
+        <ul class="nav-menu" id="navMenu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="blogs.html">Blog</a></li>
+            <li><a href="contact.html" class="btn-contact">Contact</a></li>
+        </ul>
+    </nav>
+    <div class="mobile-toggle" id="mobileToggle"><span></span><span></span><span></span></div>
+</header>
+
+<!-- Page Hero -->
+<section class="page-hero">
+  <div class="wrap">
+    <h1>Privacy Policy</h1>
+    <p>Your privacy is important to us. Learn how we protect and handle your information.</p>
+  </div>
+</section>
+
+<!-- Privacy Policy Content -->
+<section class="privacy-content">
+  <div class="wrap">
+    <div class="last-updated">
+      <p><strong>Last Updated:</strong> May 2026</p>
+    </div>
+
+    <div class="privacy-section">
+      <h2>1. Introduction</h2>
+      <p>Welcome to VINTECH DIGITAL SERVICES. We are committed to protecting your privacy and ensuring the security of your personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website or use our services.</p>
+      <p>By accessing our website and using our services, you consent to the practices described in this policy.</p>
+    </div>
+
+    <div class="privacy-section">
+      <h2>2. Information We Collect</h2>
+      
+      <h3>Personal Information</h3>
+      <p>We may collect personal information that you voluntarily provide to us, including:</p>
+      <ul>
+        <li>Full name and contact details (email address, phone number)</li>
+        <li>Business information and project requirements</li>
+        <li>Billing and payment information</li>
+        <li>Communication preferences</li>
+      </ul>
+
+      <h3>Automatically Collected Information</h3>
+      <p>When you visit our website, we may automatically collect:</p>
+      <ul>
+        <li>IP address and browser type</li>
+        <li>Device information and operating system</li>
+        <li>Pages visited and time spent on our site</li>
+        <li>Referring website addresses</li>
+      </ul>
+    </div>
+
+    <div class="privacy-section">
+      <h2>3. How We Use Your Information</h2>
+      <p>We use the information we collect for various purposes, including:</p>
+      <ul>
+        <li>Providing and maintaining our services</li>
+        <li>Processing your requests and transactions</li>
+        <li>Communicating with you about our services</li>
+        <li>Improving our website and user experience</li>
+        <li>Sending marketing communications (with your consent)</li>
+        <li>Complying with legal obligations</li>
+      </ul>
+    </div>
+
+    <div class="privacy-section">
+      <h2>4. Data Sharing and Disclosure</h2>
+      <p>We do not sell, trade, or rent your personal information to third parties. We may share your information in the following circumstances:</p>
+      <ul>
+        <li><strong>Service Providers:</strong> With trusted third parties who assist us in operating our website and providing our services</li>
+        <li><strong>Legal Requirements:</strong> When required by law or to protect our rights and safety</li>
+        <li><strong>Business Transfers:</strong> In connection with a merger, acquisition, or sale of assets</li>
+      </ul>
+    </div>
+
+    <div class="privacy-section">
+      <h2>5. Data Security</h2>
+      <p>We implement appropriate technical and organizational security measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction. However, no method of transmission over the Internet or electronic storage is 100% secure, and we cannot guarantee absolute security.</p>
+    </div>
+
+    <div class="privacy-section">
+      <h2>6. Your Rights and Choices</h2>
+      <p>You have the right to:</p>
+      <ul>
+        <li>Access and review your personal information</li>
+        <li>Correct inaccurate or incomplete data</li>
+        <li>Request deletion of your personal information</li>
+        <li>Object to or restrict processing of your data</li>
+        <li>Withdraw consent at any time</li>
+        <li>Opt-out of marketing communications</li>
+      </ul>
+      <p>To exercise these rights, please contact us using the information provided below.</p>
+    </div>
+
+    <div class="privacy-section">
+      <h2>7. Cookies and Tracking Technologies</h2>
+      <p>We use cookies and similar tracking technologies to enhance your experience on our website. Cookies are small files stored on your device that help us analyze web traffic and remember your preferences.</p>
+      <p>You can control cookie settings through your browser preferences. However, disabling cookies may affect your experience on our website.</p>
+    </div>
+
+    <div class="privacy-section">
+      <h2>8. Third-Party Links</h2>
+      <p>Our website may contain links to third-party websites. This Privacy Policy applies only to our website and services. We are not responsible for the privacy practices or content of third-party sites. We encourage you to review the privacy policies of any third-party sites you visit.</p>
+    </div>
+
+    <div class="privacy-section">
+      <h2>9. Data Retention</h2>
+      <p>We retain your personal information only for as long as necessary to fulfill the purposes outlined in this Privacy Policy, unless a longer retention period is required or permitted by law.</p>
+    </div>
+
+    <div class="privacy-section">
+      <h2>10. Children's Privacy</h2>
+      <p>Our services are not directed to individuals under the age of 18. We do not knowingly collect personal information from children. If you are a parent or guardian and believe your child has provided us with personal information, please contact us immediately.</p>
+    </div>
+
+    <div class="privacy-section">
+      <h2>11. International Data Transfers</h2>
+      <p>Your information may be transferred to and processed in countries other than your own. We ensure appropriate safeguards are in place to protect your data in accordance with this Privacy Policy.</p>
+    </div>
+
+    <div class="privacy-section">
+      <h2>12. Changes to This Privacy Policy</h2>
+      <p>We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new policy on this page and updating the "Last Updated" date. We encourage you to review this policy periodically.</p>
+    </div>
+
+    <div class="contact-box">
+      <h3>Contact Us</h3>
+      <p>If you have any questions about this Privacy Policy or our data practices, please contact us:</p>
+      <p>Email: <strong>vintechdigitalservices@gmail.com</strong></p>
+      <p>Phone: <strong>+234 812 402 2971</strong></p>
+      <a href="contact.html" class="btn btn-primary">Contact Us</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-wrap">
+    <div class="col">
+      <div class="nav-logo">
+        <img src="logo.png" alt="VINTECH Logo">
+        
+      </div>
+      <p>Premium digital solutions that transform brands and drive measurable business growth.</p>
+      <p><i class="fas fa-phone"></i> <a href="tel:+2348124022971">+234 812 402 2971</a></p>
+      <p><i class="fas fa-envelope"></i> <a href="mailto:vintechdigitalservices@gmail.com">vintechdigitalservices@gmail.com</a></p>
+    </div>
+    <div class="col">
+      <h4>Quick Links</h4>
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="services.html">Our Services</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="blogs.html">Blog</a>
+      <a href="contact.html">Contact Us</a>
+    </div>
+    <div class="col">
+      <h4>Our Services</h4>
+      <div class="service-list">
+        <p>Website Development</p>
+        <p>E-Commerce Stores</p>
+        <p>Certificate Portals</p>
+        <p>SEO Optimization</p>
+        <p>Landing Pages</p>
+      </div>
+    </div>
+    <div class="col">
+      <h4>Connect With Us</h4>
+      <div class="social-icons">
+        <a href="https://wa.me/2348124022971" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://www.facebook.com/share/1DBb1LC5XD/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com/vintechdigitalservices?igsh=MXgyOTZneHVwODMwaQ==" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.tiktok.com/@vintech.digital.s?_r=1&_t=ZS-91PyPIfnPF4" target="_blank"><i class="fab fa-tiktok"></i></a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="legal-links">
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms of Service</a>
+    </div>
+    <div class="copyright">
+      © 2025 Vintech Digital Services. All rights reserved.
+    </div>
+  </div>
+</footer>
+
+<!-- FLOATING PHONE CTA BUTTON -->
+<div id="global-cta">
+    <div id="cta-main" class="ringing">
+        <i class="fas fa-phone-alt"></i>
+    </div>
+    <div id="cta-options">
+        <a href="strategy.html" class="cta-option">📅 Book Free Strategy Session</a>
+        <a href="https://wa.me/2348124022971?text=Hello%20Vintech%20Digital%20Services%2C%20I%20got%20your%20contact%20info%20from%20your%20website%20and%20I'm%20interested%20in%20your%20services." target="_blank" class="cta-option">💬 Chat Our Team</a>
+        <a href="tel:+2348124022971" class="cta-option">📞 Call Us Now</a>
+        <a href="faq.html" class="cta-option">❓ FAQs</a>
+        <a href="contact.html" class="cta-option">📝 Drop Feedback</a>
+    </div>
+</div>
+
+<script>
+    // Mobile Drawer Functions
+    const mobileToggleBtn = document.getElementById('mobileToggle');
+    const navDrawer = document.getElementById('navDrawer');
+    const drawerOverlay = document.getElementById('drawerOverlay');
+    const drawerCloseBtn = document.getElementById('drawerClose');
+    
+    function openDrawer() {
+        navDrawer.classList.add('open');
+        drawerOverlay.classList.add('active');
+        document.body.style.overflow = 'hidden';
+        if (mobileToggleBtn) mobileToggleBtn.classList.add('active');
+    }
+    
+    function closeDrawer() {
+        navDrawer.classList.remove('open');
+        drawerOverlay.classList.remove('active');
+        document.body.style.overflow = '';
+        if (mobileToggleBtn) mobileToggleBtn.classList.remove('active');
+    }
+    
+    if (mobileToggleBtn) {
+        mobileToggleBtn.addEventListener('click', openDrawer);
+    }
+    if (drawerCloseBtn) {
+        drawerCloseBtn.addEventListener('click', closeDrawer);
+    }
+    if (drawerOverlay) {
+        drawerOverlay.addEventListener('click', closeDrawer);
+    }
+    document.querySelectorAll('.drawer-nav a').forEach(link => {
+        link.addEventListener('click', closeDrawer);
+    });
+    
+    // Floating CTA Functions
+    let ringTimeout;
+    const ctaMain = document.getElementById('cta-main');
+    const ctaOptions = document.getElementById('cta-options');
+    
+    function toggleCTAMenu() {
+        if (ctaOptions) {
+            if (ctaOptions.style.display === 'flex') {
+                ctaOptions.style.display = 'none';
+                if (ctaMain && !ctaMain.classList.contains('ringing')) {
+                    ctaMain.classList.add('ringing');
+                    clearTimeout(ringTimeout);
+                    ringTimeout = setTimeout(() => {
+                        if (ctaMain) ctaMain.classList.remove('ringing');
+                    }, 3000);
+                }
+            } else {
+                ctaOptions.style.display = 'flex';
+                if (ctaMain) {
+                    ctaMain.classList.remove('ringing');
+                    clearTimeout(ringTimeout);
+                }
+            }
+        }
+    }
+    
+    if (ctaMain) {
+        ctaMain.addEventListener('click', toggleCTAMenu);
+    }
+    
+    function startRingingCycle() {
+        if (ctaMain && ctaOptions && ctaOptions.style.display !== 'flex' && !ctaMain.classList.contains('ringing')) {
+            ctaMain.classList.add('ringing');
+            ringTimeout = setTimeout(() => {
+                if (ctaMain) ctaMain.classList.remove('ringing');
+                setTimeout(startRingingCycle, 10000);
+            }, 3000);
+        } else {
+            setTimeout(startRingingCycle, 5000);
+        }
+    }
+    
+    setTimeout(startRingingCycle, 5000);
+    
+    document.addEventListener('click', function(event) {
+        if (ctaOptions && ctaMain && ctaOptions.style.display === 'flex' && 
+            !ctaMain.contains(event.target) && 
+            !ctaOptions.contains(event.target)) {
+            ctaOptions.style.display = 'none';
+            if (ctaMain && !ctaMain.classList.contains('ringing')) {
+                ctaMain.classList.add('ringing');
+                clearTimeout(ringTimeout);
+                ringTimeout = setTimeout(() => {
+                    if (ctaMain) ctaMain.classList.remove('ringing');
+                }, 3000);
+            }
+        }
+    });
+</script>
+
+</body>
+</html>

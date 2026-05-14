@@ -1,0 +1,960 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-5V5S8TT3');</script>
+    <!-- End Google Tag Manager -->
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="logo.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="logo.png">
+    
+    <!-- Primary SEO Tags -->
+    <title>Terms of Service | Vintech Digital Services</title>
+    <meta name="title" content="Terms of Service - Vintech Digital Services">
+    <meta name="description" content="Read the Terms of Service for Vintech Digital Services. Understand our policies, user obligations, and legal terms governing the use of our website and services.">
+    <meta name="keywords" content="terms of service, terms and conditions, legal terms, Vintech terms">
+    <meta name="author" content="Vintech Digital Services">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://vintechdigitalservices.com/terms.html">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://vintechdigitalservices.com/terms.html">
+    <meta property="og:title" content="Terms of Service | Vintech Digital Services">
+    <meta property="og:description" content="Read the Terms of Service for Vintech Digital Services. Understand our policies, user obligations, and legal terms.">
+    <meta property="og:image" content="https://vintechdigitalservices.com/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:site_name" content="Vintech Digital Services">
+    <meta property="og:locale" content="en_NG">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    meta name="twitter:url" content="https://vintechdigitalservices.com/terms.html">
+    <meta name="twitter:title" content="Terms of Service | Vintech Digital Services">
+    <meta name="twitter:description" content="Read the Terms of Service for Vintech Digital Services. Understand our policies, user obligations, and legal terms.">
+    <meta name="twitter:image" content="https://vintechdigitalservices.com/og-image.jpg">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #ffffff;
+            color: #001F54;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        /* Header */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.98);
+            padding: 5px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        .logo img {
+            height: 56px;
+            width: auto;
+        }
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+            align-items: center;
+        }
+        .nav-menu a {
+            text-decoration: none;
+            color: #475569;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.3s;
+        }
+        .nav-menu a:hover {
+            color: #e67e22;
+        }
+        .btn-contact {
+            background: #e67e22;
+            color: #fff !important;
+            padding: 8px 20px;
+            border-radius: 4px;
+        }
+        .mobile-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            z-index: 1001;
+        }
+        .mobile-toggle span {
+            width: 25px;
+            height: 3px;
+            background: #001F54;
+            border-radius: 2px;
+            transition: 0.3s;
+        }
+        
+        /* Mobile Drawer Navigation */
+        .nav-drawer {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 85%;
+            max-width: 320px;
+            height: 100%;
+            background: #001F54;
+            z-index: 1002;
+            transition: right 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            padding: 30px 25px;
+            display: flex;
+            flex-direction: column;
+            box-shadow: -5px 0 30px rgba(0, 0, 0, 0.3);
+        }
+        .nav-drawer.open { right: 0; }
+        .drawer-header { display: flex; justify-content: flex-end; margin-bottom: 40px; }
+        .drawer-close {
+            background: rgba(255,255,255,0.1);
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: background 0.3s;
+            color: white;
+            font-size: 1.2rem;
+        }
+        .drawer-close:hover { background: #e67e22; }
+        .drawer-logo { text-align: center; margin-bottom: 40px; }
+        .drawer-logo img { height: 60px; width: auto; }
+        .drawer-nav { flex: 1; }
+        .drawer-nav ul { list-style: none; padding: 0; }
+        .drawer-nav li { margin-bottom: 25px; }
+        .drawer-nav a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: 500;
+            display: block;
+            padding: 8px 0;
+            transition: color 0.3s, transform 0.2s;
+        }
+        .drawer-nav a:hover { color: #e67e22; transform: translateX(5px); }
+        .drawer-contact { margin-top: auto; padding-top: 30px; border-top: 1px solid rgba(255,255,255,0.1); }
+        .drawer-contact .drawer-btn {
+            display: block;
+            background: #e67e22;
+            color: #ffffff;
+            text-align: center;
+            padding: 14px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background 0.3s;
+        }
+        .drawer-contact .drawer-btn:hover { background: #d35400; }
+        .drawer-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1001;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s, visibility 0.3s;
+        }
+        .drawer-overlay.active { opacity: 1; visibility: visible; }
+        
+        /* Page Hero */
+        .page-hero {
+            background: linear-gradient(135deg, #001F54 0%, #001338 100%);
+            padding: 140px 0 60px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            margin-top: 70px;
+        }
+        .page-hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 80%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(230,126,34,0.08) 0%, transparent 70%);
+            animation: float 20s ease-in-out infinite;
+        }
+        @keyframes float {
+            0%, 100% { transform: translate(0, 0); }
+            50% { transform: translate(-20px, -20px); }
+        }
+        .page-hero h1 {
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 800;
+            color: #ffffff;
+            margin-bottom: 15px;
+            animation: slideDown 0.8s ease;
+        }
+        .page-hero p {
+            font-size: 1rem;
+            color: #cbd5e1;
+            max-width: 600px;
+            margin: 0 auto;
+            animation: slideUp 0.8s ease 0.2s forwards;
+            opacity: 0;
+            animation-fill-mode: forwards;
+        }
+        @keyframes slideDown {
+            from { opacity: 0; transform: translateY(-30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        /* Terms Content */
+        .terms-content {
+            padding: 60px 0;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .terms-section {
+            margin-bottom: 40px;
+        }
+        .terms-section h2 {
+            color: #001F54;
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+            border-bottom: 2px solid #e67e22;
+            padding-bottom: 8px;
+            display: inline-block;
+        }
+        .terms-section h3 {
+            color: #001F54;
+            margin: 25px 0 15px;
+            font-size: 1.3rem;
+        }
+        .terms-section p {
+            margin-bottom: 16px;
+            color: #334155;
+            line-height: 1.8;
+        }
+        .terms-section ul {
+            margin: 16px 0;
+            padding-left: 24px;
+        }
+        .terms-section li {
+            margin-bottom: 8px;
+            color: #475569;
+            line-height: 1.7;
+        }
+        
+        /* Last Updated */
+        .last-updated {
+            background: #f8fafc;
+            padding: 20px;
+            border-radius: 12px;
+            margin-bottom: 40px;
+            text-align: center;
+            border-left: 4px solid #e67e22;
+        }
+        .last-updated strong {
+            color: #e67e22;
+        }
+        
+        /* Contact Box */
+        .contact-box {
+            background: #f8fafc;
+            padding: 30px;
+            border-radius: 16px;
+            margin-top: 40px;
+            text-align: center;
+        }
+        .contact-box h3 {
+            color: #001F54;
+            margin-bottom: 16px;
+        }
+        .btn {
+            display: inline-block;
+            padding: 12px 28px;
+            border-radius: 8px;
+            font-weight: 600;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 1rem;
+            text-decoration: none;
+        }
+        .btn-primary {
+            background: #e67e22;
+            color: #ffffff;
+            border: none;
+        }
+        .btn-primary:hover {
+            background: #d35400;
+            transform: translateY(-2px);
+        }
+        
+        /* Footer */
+        footer {
+            background: #001338;
+            color: #ffffff;
+            padding: 60px 5% 30px;
+        }
+        .footer-wrap {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 50px;
+        }
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        .nav-logo img {
+            height: 45px;
+            width: auto;
+        }
+        .nav-logo span {
+            font-size: 1.3rem;
+            font-weight: 700;
+        }
+        .col p {
+            font-size: 0.9rem;
+            line-height: 1.6;
+            opacity: 0.85;
+            margin-bottom: 12px;
+        }
+        .col p i {
+            width: 25px;
+            color: #e67e22;
+        }
+        .col p a {
+            color: #ffffff;
+            text-decoration: none;
+        }
+        .col h4 {
+            font-size: 1rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: #e67e22;
+        }
+        .col a {
+            display: block;
+            color: #ffffff;
+            text-decoration: none;
+            margin-bottom: 12px;
+            font-size: 0.9rem;
+            opacity: 0.8;
+            transition: all 0.3s;
+        }
+        .col a:hover {
+            opacity: 1;
+            transform: translateX(5px);
+        }
+        .service-list p {
+            margin-bottom: 8px;
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+        .service-list p:hover {
+            opacity: 1;
+        }
+        .social-icons {
+            display: flex;
+            gap: 15px;
+            margin-top: 15px;
+            justify-content: center;
+        }
+        .social-icons a {
+            width: 40px;
+            height: 40px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0;
+            transition: all 0.3s;
+        }
+        .social-icons a i {
+            font-size: 1.2rem;
+        }
+        .social-icons a:hover {
+            background: #e67e22;
+            transform: translateY(-3px);
+        }
+        .footer-bottom {
+            max-width: 1200px;
+            margin: 40px auto 0;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.15);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 10px;
+            text-align: center;
+        }
+        .legal-links {
+            display: flex;
+            gap: 18px;
+            justify-content: center;
+        }
+        .legal-links a {
+            font-size: 0.8rem;
+            color: #ffffff;
+            opacity: 0.7;
+            text-decoration: none;
+        }
+        .legal-links a:hover {
+            opacity: 1;
+        }
+        .copyright {
+            font-size: 0.8rem;
+            opacity: 0.7;
+            text-align: center;
+        }
+        
+        /* Floating CTA */
+        #global-cta {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 9999;
+            display: flex;
+            flex-direction: column-reverse;
+            align-items: flex-end;
+            gap: 12px;
+        }
+        #cta-main {
+            width: 60px;
+            height: 60px;
+            background: #e67e22;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 4px 20px rgba(230,126,34,0.5);
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        #cta-main i { font-size: 28px; color: #ffffff; }
+        #cta-main:hover { transform: scale(1.1); box-shadow: 0 6px 25px rgba(230,126,34,0.6); }
+        .ringing { animation: ring 1.5s ease infinite; }
+        @keyframes ring {
+            0% { transform: rotate(0) scale(1); }
+            25% { transform: rotate(10deg) scale(1.05); }
+            50% { transform: rotate(-10deg) scale(1.05); }
+            75% { transform: rotate(5deg) scale(1.02); }
+            100% { transform: rotate(0) scale(1); }
+        }
+        #cta-main::before {
+            content: '';
+            position: absolute;
+            top: -5px;
+            left: -5px;
+            right: -5px;
+            bottom: -5px;
+            border-radius: 50%;
+            background: rgba(230,126,34,0.4);
+            z-index: -1;
+            animation: glow 2s ease infinite;
+        }
+        @keyframes glow {
+            0% { opacity: 0.3; transform: scale(1); }
+            50% { opacity: 0.6; transform: scale(1.1); }
+            100% { opacity: 0.3; transform: scale(1); }
+        }
+        #cta-options {
+            display: none;
+            flex-direction: column;
+            gap: 10px;
+            margin-bottom: 10px;
+            animation: fadeInUp 0.3s ease forwards;
+        }
+        #cta-options.hide {
+            animation: fadeOutDown 0.3s ease forwards;
+        }
+        .cta-option {
+            background: #001338;
+            color: #fff;
+            padding: 12px 18px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 600;
+            white-space: nowrap;
+            transition: all 0.3s;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+            opacity: 0;
+            transform: translateY(20px);
+            animation: slideInOption 0.25s ease forwards;
+        }
+        .cta-option:nth-child(1) { animation-delay: 0.05s; }
+        .cta-option:nth-child(2) { animation-delay: 0.1s; }
+        .cta-option:nth-child(3) { animation-delay: 0.15s; }
+        .cta-option:nth-child(4) { animation-delay: 0.2s; }
+        .cta-option:nth-child(5) { animation-delay: 0.25s; }
+        @keyframes slideInOption {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @keyframes fadeOutDown {
+            from {
+                opacity: 1;
+                transform: translateY(0);
+            }
+            to {
+                opacity: 0;
+                transform: translateY(20px);
+                visibility: hidden;
+            }
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .mobile-toggle { display: flex; }
+            .nav-menu { display: none; }
+            .page-hero { margin-top: 70px; padding: 120px 0 50px; }
+            .terms-content { padding: 40px 20px; }
+            .terms-section h2 { font-size: 1.5rem; }
+            .terms-section h3 { font-size: 1.2rem; }
+            .footer-wrap { grid-template-columns: 1fr; text-align: center; }
+            .nav-logo { justify-content: center; }
+            .social-icons { justify-content: center; }
+            .footer-bottom { flex-direction: column; align-items: center; }
+            .legal-links { justify-content: center; }
+            .last-updated { margin: 0 20px 40px 20px; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5V5S8TT3"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<!-- Drawer Overlay -->
+<div class="drawer-overlay" id="drawerOverlay"></div>
+
+<!-- Mobile Drawer Navigation -->
+<div class="nav-drawer" id="navDrawer">
+    <div class="drawer-header">
+        <button class="drawer-close" id="drawerClose"><i class="fas fa-times"></i></button>
+    </div>
+    <div class="drawer-logo">
+        <img src="logo.png" alt="Vintech Digital Services">
+    </div>
+    <div class="drawer-nav">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="blogs.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+    <div class="drawer-contact">
+        <a href="contact.html" class="drawer-btn">Get a Quote</a>
+    </div>
+</div>
+
+<!-- HEADER -->
+<header>
+    <div class="logo">
+        <img src="logo.png" alt="Vintech Digital Services Logo">
+    </div>
+    <nav>
+        <ul class="nav-menu" id="navMenu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="blogs.html">Blog</a></li>
+            <li><a href="contact.html" class="btn-contact">Contact</a></li>
+        </ul>
+    </nav>
+    <div class="mobile-toggle" id="mobileToggle">
+        <span></span><span></span><span></span>
+    </div>
+</header>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+    <div class="container">
+        <h1>Terms of Service</h1>
+        <p>Please read these terms carefully before using our website and services.</p>
+    </div>
+</section>
+
+<!-- TERMS CONTENT -->
+<section class="terms-content">
+    <div class="container">
+        <div class="last-updated">
+            <p><strong>Last Updated:</strong> May 2026</p>
+        </div>
+
+        <div class="terms-section">
+            <h2>1. Introduction</h2>
+            <p>Welcome to Vintech Digital Services. These Terms of Service ("Terms") govern your use of our website, services, and products. By accessing or using our website or services, you agree to be bound by these Terms. If you disagree with any part of these Terms, you may not access our website or use our services.</p>
+        </div>
+
+        <div class="terms-section">
+            <h2>2. Definitions</h2>
+            <p><strong>"Company"</strong>, <strong>"We"</strong>, <strong>"Us"</strong>, or <strong>"Our"</strong> refers to Vintech Digital Services.</p>
+            <p><strong>"You"</strong> or <strong>"Client"</strong> refers to the individual or entity accessing or using our services.</p>
+            <p><strong>"Services"</strong> refers to web development, software development, certificate portal development, e-commerce development, SEO optimization, and any other services we provide.</p>
+            <p><strong>"Website"</strong> refers to vintechdigitalservices.com and all associated pages.</p>
+        </div>
+
+        <div class="terms-section">
+            <h2>3. Use of Our Website and Services</h2>
+            <p>You agree to use our website and services only for lawful purposes and in accordance with these Terms. You agree not to:</p>
+            <ul>
+                <li>Use our services in any way that violates any applicable federal, state, local, or international law or regulation</li>
+                <li>Attempt to interfere with or disrupt our website or servers</li>
+                <li>Use any robot, spider, or other automatic device to access our website for any purpose</li>
+                <li>Engage in any conduct that restricts or inhibits anyone's use of our website</li>
+                <li>Transmit any viruses, worms, or malicious code</li>
+            </ul>
+        </div>
+
+        <div class="terms-section">
+            <h2>4. Service Delivery and Timelines</h2>
+            <p>We strive to deliver all projects within the agreed timelines. However, delivery dates are estimates and may be affected by factors beyond our control. We will communicate any delays promptly.</p>
+            <p>Typical project timelines:</p>
+            <ul>
+                <li>Business websites: 7-14 working days</li>
+                <li>E-commerce stores: 14-21 working days</li>
+                <li>Certificate portals: 14-28 working days</li>
+                <li>Complex software solutions: Custom timeline agreed upon project start</li>
+            </ul>
+            <p>Timelines begin once we have received all necessary materials, content, and approvals from you.</p>
+        </div>
+
+        <div class="terms-section">
+            <h2>5. Payment Terms</h2>
+            <p>All prices are quoted in Nigerian Naira (NGN) unless otherwise specified. We require a deposit before commencing any project. The balance is due upon completion and before final delivery.</p>
+            <p>Payment methods accepted:</p>
+            <ul>
+                <li>Bank transfer</li>
+                <li>Online payment (where available)</li>
+            </ul>
+            <p>Late payments may result in project delays or suspension of services. All fees are non-refundable except as specifically provided in these Terms.</p>
+        </div>
+
+        <div class="terms-section">
+            <h2>6. Intellectual Property</h2>
+            <p><strong>Ownership of Work:</strong> Upon full payment, you own the final deliverables (websites, portals, software) developed specifically for your project. However, we retain ownership of our underlying code libraries, frameworks, and reusable components.</p>
+            <p><strong>Our Intellectual Property:</strong> Our website content, logos, graphics, and proprietary code are owned by Vintech Digital Services and are protected by copyright and other intellectual property laws.</p>
+            <p><strong>Your Content:</strong> You retain ownership of any content, images, and materials you provide to us for use in your project. You grant us a license to use this content solely for the purpose of completing your project.</p>
+        </div>
+
+        <div class="terms-section">
+            <h2>7. Client Responsibilities</h2>
+            <p>As a client, you agree to:</p>
+            <ul>
+                <li>Provide timely responses to our requests for information and approvals</li>
+                <li>Supply all necessary content, images, and materials within agreed timelines</li>
+                <li>Review deliverables promptly and provide feedback</li>
+                <li>Ensure you have the legal right to use any content you provide</li>
+                <li>Maintain backups of your website content after delivery</li>
+            </ul>
+        </div>
+
+        <div class="terms-section">
+            <h2>8. Revisions and Changes</h2>
+            <p>Each project includes a specified number of revision rounds as outlined in your package. Additional revisions beyond the included rounds may incur extra charges.</p>
+            <p>Significant changes to the project scope after work has begun may require a new estimate and may affect the delivery timeline. We will discuss any scope changes with you before proceeding.</p>
+        </div>
+
+        <div class="terms-section">
+            <h2>9. Warranties and Disclaimers</h2>
+            <p>We warrant that our services will be performed in a professional and workmanlike manner. However, we do not warrant that our services will be uninterrupted, error-free, or completely secure.</p>
+            <p><strong>Disclaimer:</strong> To the fullest extent permitted by law, we disclaim all warranties, express or implied, including but not limited to implied warranties of merchantability and fitness for a particular purpose.</p>
+        </div>
+
+        <div class="terms-section">
+            <h2>10. Limitation of Liability</h2>
+            <p>To the maximum extent permitted by law, Vintech Digital Services shall not be liable for any indirect, incidental, special, consequential, or punitive damages, or any loss of profits or revenues, whether incurred directly or indirectly, or any loss of data, use, goodwill, or other intangible losses, resulting from:</p>
+            <ul>
+                <li>Your use or inability to use our services</li>
+                <li>Any unauthorized access to or use of our servers and/or any personal information stored therein</li>
+                <li>Any interruption or cessation of transmission to or from our services</li>
+                <li>Any bugs, viruses, or other harmful code that may be transmitted to or through our services</li>
+            </ul>
+        </div>
+
+        <div class="terms-section">
+            <h2>11. Termination</h2>
+            <p>Either party may terminate a project agreement if the other party materially breaches the agreement and fails to cure the breach within 14 days of receiving written notice.</p>
+            <p>Upon termination, you will pay for all work completed up to the termination date. We will provide you with all completed work upon full payment of outstanding invoices.</p>
+        </div>
+
+        <div class="terms-section">
+            <h2>12. Privacy and Data Protection</h2>
+            <p>Your privacy is important to us. Our collection and use of your personal information is governed by our Privacy Policy. By using our services, you consent to the collection and use of your information as described in the <a href="privacy.html">Privacy policy</a></li>.</p>
+        </div>
+
+        <div class="terms-section">
+            <h2>13. Third-Party Services</h2>
+            <p>Our services may integrate with third-party services (such as payment gateways, hosting providers, or analytics tools). We are not responsible for the performance, security, or reliability of these third-party services. Your use of third-party services is subject to their respective terms and policies.</p>
+        </div>
+
+        <div class="terms-section">
+            <h2>14. Governing Law</h2>
+            <p>These Terms shall be governed by and construed in accordance with the laws of the Federal Republic of Nigeria. Any disputes arising under these Terms shall be subject to the exclusive jurisdiction of the courts located in Anambra State, Nigeria.</p>
+        </div>
+
+        <div class="terms-section">
+            <h2>15. Changes to These Terms</h2>
+            <p>We reserve the right to update or modify these Terms at any time without prior notice. Changes will be effective immediately upon posting on this page. Your continued use of our website and services after any changes constitutes your acceptance of the revised Terms.</p>
+            <p>We encourage you to review these Terms periodically for any changes.</p>
+        </div>
+
+        <div class="terms-section">
+            <h2>16. Contact Information</h2>
+            <p>If you have any questions about these Terms, please contact us:</p>
+            <ul>
+                <li>Email: <strong>vintechdigitalservices@gmail.com</strong></li>
+                <li>Phone: <strong>+234 812 402 2971</strong></li>
+                <li>Address: <strong>Anambra State, Nigeria</strong></li>
+            </ul>
+        </div>
+
+        <div class="contact-box">
+            <h3>Have Questions About Our Terms?</h3>
+            <p>If you need clarification on any of our terms or policies, please don't hesitate to reach out.</p>
+            <a href="contact.html" class="btn btn-primary">Contact Us</a>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <div class="footer-wrap">
+        <div class="col">
+            <div class="nav-logo">
+                <img src="logo.png" alt="VINTECH Logo">
+            </div>
+            <p>Premium digital solutions that transform brands and drive measurable business growth.</p>
+            <p><i class="fas fa-phone"></i> <a href="tel:+2348124022971">+234 812 402 2971</a></p>
+            <p><i class="fas fa-envelope"></i> <a href="mailto:vintechdigitalservices@gmail.com">vintechdigitalservices@gmail.com</a></p>
+        </div>
+        <div class="col">
+            <h4>Quick Links</h4>
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="services.html">Our Services</a>
+            <a href="portfolio.html">Portfolio</a>
+            <a href="blogs.html">Blog</a>
+            <a href="contact.html">Contact Us</a>
+        </div>
+        <div class="col">
+            <h4>Our Services</h4>
+            <div class="service-list">
+                <p>Website Development</p>
+                <p>E-Commerce Stores</p>
+                <p>Certificate Portals</p>
+                <p>SEO Optimization</p>
+                <p>Landing Pages</p>
+            </div>
+        </div>
+        <div class="col">
+            <h4>Connect With Us</h4>
+            <div class="social-icons">
+                <a href="https://wa.me/2348124022971" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                <a href="https://www.facebook.com/share/1DBb1LC5XD/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/vintechdigitalservices?igsh=MXgyOTZneHVwODMwaQ==" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.tiktok.com/@vintech.digital.s?_r=1&_t=ZS-91PyPIfnPF4" target="_blank"><i class="fab fa-tiktok"></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <div class="legal-links">
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="terms.html">Terms of Service</a>
+        </div>
+        <div class="copyright">
+            © 2026 Vintech Digital Services. All rights reserved.
+        </div>
+    </div>
+</footer>
+
+<!-- FLOATING PHONE CTA BUTTON -->
+<div id="global-cta">
+    <div id="cta-main" class="ringing">
+        <i class="fas fa-phone-alt"></i>
+    </div>
+    <div id="cta-options">
+        <a href="strategy.html" class="cta-option">📅 Book Free Strategy Session</a>
+        <a href="https://wa.me/2348124022971?text=Hello%20Vintech%20Digital%20Services%2C%20I%20got%20your%20contact%20info%20from%20your%20website%20and%20I'm%20interested%20in%20your%20services." target="_blank" class="cta-option">💬 Chat Our Team</a>
+        <a href="tel:+2348124022971" class="cta-option">📞 Call Us Now</a>
+        <a href="faq.html" class="cta-option">❓ FAQs</a>
+        <a href="contact.html" class="cta-option">📝 Drop Feedback</a>
+    </div>
+</div>
+
+<script>
+    // Mobile Drawer Functions
+    const mobileToggleBtn = document.getElementById('mobileToggle');
+    const navDrawer = document.getElementById('navDrawer');
+    const drawerOverlay = document.getElementById('drawerOverlay');
+    const drawerCloseBtn = document.getElementById('drawerClose');
+    
+    function openDrawer() {
+        navDrawer.classList.add('open');
+        drawerOverlay.classList.add('active');
+        document.body.style.overflow = 'hidden';
+        if (mobileToggleBtn) mobileToggleBtn.classList.add('active');
+    }
+    
+    function closeDrawer() {
+        navDrawer.classList.remove('open');
+        drawerOverlay.classList.remove('active');
+        document.body.style.overflow = '';
+        if (mobileToggleBtn) mobileToggleBtn.classList.remove('active');
+    }
+    
+    if (mobileToggleBtn) {
+        mobileToggleBtn.addEventListener('click', openDrawer);
+    }
+    if (drawerCloseBtn) {
+        drawerCloseBtn.addEventListener('click', closeDrawer);
+    }
+    if (drawerOverlay) {
+        drawerOverlay.addEventListener('click', closeDrawer);
+    }
+    document.querySelectorAll('.drawer-nav a').forEach(link => {
+        link.addEventListener('click', closeDrawer);
+    });
+    
+    // Floating CTA Functions
+    let ringTimeout;
+    const ctaMain = document.getElementById('cta-main');
+    const ctaOptions = document.getElementById('cta-options');
+    
+    function toggleCTAMenu() {
+        if (ctaOptions) {
+            if (ctaOptions.style.display === 'flex') {
+                ctaOptions.classList.add('hide');
+                setTimeout(() => {
+                    ctaOptions.style.display = 'none';
+                    ctaOptions.classList.remove('hide');
+                }, 300);
+                if (ctaMain && !ctaMain.classList.contains('ringing')) {
+                    ctaMain.classList.add('ringing');
+                    clearTimeout(ringTimeout);
+                    ringTimeout = setTimeout(() => {
+                        if (ctaMain) ctaMain.classList.remove('ringing');
+                    }, 3000);
+                }
+            } else {
+                ctaOptions.style.display = 'flex';
+                ctaOptions.classList.remove('hide');
+                if (ctaMain) {
+                    ctaMain.classList.remove('ringing');
+                    clearTimeout(ringTimeout);
+                }
+            }
+        }
+    }
+    
+    if (ctaMain) {
+        ctaMain.addEventListener('click', toggleCTAMenu);
+    }
+    
+    function startRingingCycle() {
+        if (ctaMain && ctaOptions && ctaOptions.style.display !== 'flex' && !ctaMain.classList.contains('ringing')) {
+            ctaMain.classList.add('ringing');
+            ringTimeout = setTimeout(() => {
+                if (ctaMain) ctaMain.classList.remove('ringing');
+                setTimeout(startRingingCycle, 10000);
+            }, 3000);
+        } else {
+            setTimeout(startRingingCycle, 5000);
+        }
+    }
+    
+    setTimeout(startRingingCycle, 5000);
+    
+    document.addEventListener('click', function(event) {
+        if (ctaOptions && ctaMain && ctaOptions.style.display === 'flex' && 
+            !ctaMain.contains(event.target) && 
+            !ctaOptions.contains(event.target)) {
+            ctaOptions.classList.add('hide');
+            setTimeout(() => {
+                ctaOptions.style.display = 'none';
+                ctaOptions.classList.remove('hide');
+            }, 300);
+            if (ctaMain && !ctaMain.classList.contains('ringing')) {
+                ctaMain.classList.add('ringing');
+                clearTimeout(ringTimeout);
+                ringTimeout = setTimeout(() => {
+                    if (ctaMain) ctaMain.classList.remove('ringing');
+                }, 3000);
+            }
+        }
+    });
+</script>
+</body>
+</html>

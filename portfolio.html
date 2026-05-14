@@ -1,0 +1,1403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-5V5S8TT3');</script>
+    <!-- End Google Tag Manager -->
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="logo1.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="logo.png">
+    
+    <title>Portfolio | Vintech Digital Services - Our Projects</title>
+    <meta name="description" content="Explore our portfolio of successful projects including websites, e-commerce stores, certificate portals, and digital solutions for businesses and organizations.">
+    <meta name="keywords" content="Vintech Portfolio, Web Development Projects, Certificate Portal, LMS Platform, Business Websites">
+    <meta name="author" content="Vintech Digital Services">
+    <meta name="robots" content="index, follow">
+
+    <link rel="canonical" href="https://vintechdigital.com/portfolio.html">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    
+    <!-- Firebase SDK -->
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+        import { getFirestore, collection, addDoc, serverTimestamp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
+        
+        const firebaseConfig = {
+            apiKey: "AIzaSyBBZfUSIlJKUaHV05t-x1B4J-cXQJtcXEs",
+            authDomain: "vintech-backend.firebaseapp.com",
+            projectId: "vintech-backend",
+            storageBucket: "vintech-backend.firebasestorage.app",
+            messagingSenderId: "891897245100",
+            appId: "1:891897245100:web:9f935a6337831c5a649e09"
+        };
+        
+        const app = initializeApp(firebaseConfig);
+        const db = getFirestore(app);
+        
+        window.db = db;
+        window.collection = collection;
+        window.addDoc = addDoc;
+        window.serverTimestamp = serverTimestamp;
+    </script>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #ffffff;
+            color: #001F54;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        /* Header */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.98);
+            padding: 5px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        .logo img {
+            height: 56px;
+            width: auto;
+        }
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+            align-items: center;
+        }
+        .nav-menu a {
+            text-decoration: none;
+            color: #475569;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.3s;
+        }
+        .nav-menu a:hover {
+            color: #e67e22;
+        }
+        .btn-contact {
+            background: #e67e22;
+            color: #fff !important;
+            padding: 8px 20px;
+            border-radius: 4px;
+        }
+        .mobile-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            z-index: 1001;
+        }
+        .mobile-toggle span {
+            width: 25px;
+            height: 3px;
+            background: #001F54;
+            border-radius: 2px;
+            transition: 0.3s;
+        }
+        
+        /* Mobile Drawer Navigation */
+        .nav-drawer {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 85%;
+            max-width: 320px;
+            height: 100%;
+            background: #001F54;
+            z-index: 1002;
+            transition: right 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            padding: 30px 25px;
+            display: flex;
+            flex-direction: column;
+            box-shadow: -5px 0 30px rgba(0, 0, 0, 0.3);
+        }
+        .nav-drawer.open { right: 0; }
+        .drawer-header { display: flex; justify-content: flex-end; margin-bottom: 40px; }
+        .drawer-close {
+            background: rgba(255,255,255,0.1);
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: background 0.3s;
+            color: white;
+            font-size: 1.2rem;
+        }
+        .drawer-close:hover { background: #e67e22; }
+        .drawer-logo { text-align: center; margin-bottom: 40px; }
+        .drawer-logo img { height: 60px; width: auto; }
+        .drawer-nav { flex: 1; }
+        .drawer-nav ul { list-style: none; padding: 0; }
+        .drawer-nav li { margin-bottom: 25px; }
+        .drawer-nav a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: 500;
+            display: block;
+            padding: 8px 0;
+            transition: color 0.3s, transform 0.2s;
+        }
+        .drawer-nav a:hover { color: #e67e22; transform: translateX(5px); }
+        .drawer-contact { margin-top: auto; padding-top: 30px; border-top: 1px solid rgba(255,255,255,0.1); }
+        .drawer-contact .drawer-btn {
+            display: block;
+            background: #e67e22;
+            color: #ffffff;
+            text-align: center;
+            padding: 14px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background 0.3s;
+        }
+        .drawer-contact .drawer-btn:hover { background: #d35400; }
+        .drawer-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1001;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s, visibility 0.3s;
+        }
+        .drawer-overlay.active { opacity: 1; visibility: visible; }
+        
+        /* Page Hero */
+        .page-hero {
+            background: linear-gradient(135deg, #001F54 0%, #001338 100%);
+            padding: 140px 0 60px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            margin-top: 70px;
+        }
+        .page-hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 80%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(230,126,34,0.08) 0%, transparent 70%);
+            animation: float 20s ease-in-out infinite;
+        }
+        @keyframes float {
+            0%, 100% { transform: translate(0, 0); }
+            50% { transform: translate(-20px, -20px); }
+        }
+        .page-hero h1 {
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 800;
+            color: #ffffff;
+            margin-bottom: 15px;
+            animation: slideDown 0.8s ease;
+        }
+        .page-hero p {
+            font-size: 1rem;
+            color: #cbd5e1;
+            max-width: 600px;
+            margin: 0 auto;
+            animation: slideUp 0.8s ease 0.2s forwards;
+            opacity: 0;
+            animation-fill-mode: forwards;
+        }
+        @keyframes slideDown {
+            from { opacity: 0; transform: translateY(-30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        /* Portfolio Grid */
+        .portfolio-section {
+            padding: 80px 0;
+            background: #f8fafc;
+        }
+        .portfolio-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        .section-label {
+            display: inline-block;
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: #e67e22;
+            background: rgba(230, 126, 34, 0.1);
+            padding: 5px 12px;
+            border-radius: 100px;
+            margin-bottom: 15px;
+        }
+        .portfolio-header h2 {
+            font-size: clamp(1.8rem, 3.5vw, 2.5rem);
+            font-weight: 800;
+            color: #001F54;
+            margin-bottom: 15px;
+        }
+        .portfolio-header p {
+            color: #64748b;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+        
+        /* Portfolio Card - Hidden initially, slide right on scroll */
+        .portfolio-card {
+            background: #ffffff;
+            border-radius: 20px;
+            overflow: hidden;
+            transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            opacity: 0;
+            transform: translateX(50px);
+        }
+        .portfolio-card.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        .portfolio-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+        }
+        .card-image {
+            position: relative;
+            overflow: hidden;
+            height: 240px;
+        }
+        .card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        .portfolio-card:hover .card-image img {
+            transform: scale(1.05);
+        }
+        .card-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 20px;
+            background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+        }
+        .card-tag {
+            background: #e67e22;
+            color: #ffffff;
+            font-size: 0.7rem;
+            font-weight: 700;
+            padding: 5px 12px;
+            border-radius: 100px;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            display: inline-block;
+        }
+        .card-body {
+            padding: 24px;
+        }
+        .card-body h3 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #001F54;
+            margin-bottom: 10px;
+        }
+        .card-body p {
+            font-size: 0.85rem;
+            color: #64748b;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        .card-buttons {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        .btn-learn {
+            background: none;
+            border: none;
+            color: #e67e22;
+            font-size: 0.85rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+        }
+        .btn-enquire {
+            background: none;
+            border: none;
+            color: #001F54;
+            font-size: 0.85rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+        }
+        .btn-learn:hover, .btn-enquire:hover {
+            transform: translateX(5px);
+            color: #d35400;
+        }
+        
+        /* Stats Section - Navy Blue Cards (Matching Homepage) */
+        .stats-section {
+            padding: 60px 0;
+            background: #ffffff;
+        }
+        .stats__grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+        }
+        .stat-card {
+            text-align: center;
+            padding: 40px 20px;
+            background: #001F54;
+            border-radius: 20px;
+            transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        .stat-card.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .stat-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        }
+        .stat-card i {
+            font-size: 2.5rem;
+            color: #e67e22;
+            margin-bottom: 15px;
+        }
+        .stat-card .stat__num {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: #ffffff;
+            display: inline-block;
+        }
+        .stat-card .stat__plus {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #e67e22;
+        }
+        .stat-card p {
+            font-size: 0.9rem;
+            color: #cbd5e1;
+            margin-top: 8px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, #001F54 0%, #001338 100%);
+            padding: 80px 0;
+            text-align: center;
+        }
+        .cta-section h2 {
+            font-size: clamp(1.8rem, 3vw, 2.2rem);
+            color: #ffffff;
+            margin-bottom: 15px;
+        }
+        .cta-section p {
+            color: #cbd5e1;
+            margin-bottom: 30px;
+        }
+        .cta-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: #e67e22;
+            color: #ffffff;
+            padding: 14px 32px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: all 0.3s;
+        }
+        .cta-btn:hover {
+            background: #d35400;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(230,126,34,0.3);
+        }
+        
+        /* Footer - Services as plain text */
+        footer {
+            background: #001338;
+            color: #ffffff;
+            padding: 60px 5% 30px;
+        }
+        .footer-wrap {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 50px;
+        }
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        .nav-logo img {
+            height: 45px;
+            width: auto;
+        }
+        .nav-logo span {
+            font-size: 1.3rem;
+            font-weight: 700;
+        }
+        .col p {
+            font-size: 0.9rem;
+            line-height: 1.6;
+            opacity: 0.85;
+            margin-bottom: 12px;
+        }
+        .col p i {
+            width: 25px;
+            color: #e67e22;
+        }
+        .col p a {
+            color: #ffffff;
+            text-decoration: none;
+        }
+        .col h4 {
+            font-size: 1rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: #e67e22;
+        }
+        .col a {
+            display: block;
+            color: #ffffff;
+            text-decoration: none;
+            margin-bottom: 12px;
+            font-size: 0.9rem;
+            opacity: 0.8;
+            transition: all 0.3s;
+        }
+        .col a:hover {
+            opacity: 1;
+            transform: translateX(5px);
+        }
+        .service-list p {
+            margin-bottom: 8px;
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+        .service-list p:hover {
+            opacity: 1;
+        }
+        .social-icons {
+            display: flex;
+            gap: 15px;
+            margin-top: 15px;
+            justify-content: center;
+        }
+        .social-icons a {
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0;
+            transition: all 0.3s;
+        }
+        .social-icons a i {
+            font-size: 1.2rem;
+        }
+        .social-icons a:hover {
+            background: #e67e22;
+            transform: translateY(-3px);
+        }
+        .footer-bottom {
+            max-width: 1200px;
+            margin: 40px auto 0;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 10px;
+            text-align: center;
+        }
+        .legal-links {
+            display: flex;
+            gap: 18px;
+            justify-content: center;
+        }
+        .legal-links a {
+            font-size: 0.8rem;
+            color: #ffffff;
+            opacity: 0.7;
+            text-decoration: none;
+        }
+        .legal-links a:hover {
+            opacity: 1;
+        }
+        .copyright {
+            font-size: 0.8rem;
+            opacity: 0.7;
+            text-align: center;
+        }
+        
+        /* Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 2000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            overflow-y: auto;
+        }
+        .modal-content {
+            background: #ffffff;
+            margin: 50px auto;
+            padding: 40px;
+            width: 90%;
+            max-width: 600px;
+            border-radius: 24px;
+            position: relative;
+            animation: modalSlideIn 0.3s ease;
+        }
+        @keyframes modalSlideIn {
+            from {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        .modal-close {
+            position: absolute;
+            right: 20px;
+            top: 20px;
+            font-size: 28px;
+            cursor: pointer;
+            color: #64748b;
+            transition: color 0.2s;
+        }
+        .modal-close:hover {
+            color: #e67e22;
+        }
+        .modal-content h2 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: #001F54;
+        }
+        .modal-content form div {
+            margin-bottom: 20px;
+        }
+        .modal-content label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #334155;
+        }
+        .modal-content input,
+        .modal-content select,
+        .modal-content textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1.5px solid #e2e8f0;
+            border-radius: 12px;
+            font-size: 0.95rem;
+        }
+        .modal-content input:focus,
+        .modal-content select:focus,
+        .modal-content textarea:focus {
+            outline: none;
+            border-color: #e67e22;
+        }
+        .modal-submit {
+            width: 100%;
+            padding: 14px;
+            background: #e67e22;
+            color: #ffffff;
+            border: none;
+            border-radius: 12px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        .modal-submit:hover {
+            background: #d35400;
+        }
+        
+        /* Floating CTA */
+        #global-cta {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 9999;
+            display: flex;
+            flex-direction: column-reverse;
+            align-items: flex-end;
+            gap: 12px;
+        }
+        #cta-main {
+            width: 60px;
+            height: 60px;
+            background: #e67e22;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 4px 20px rgba(230,126,34,0.5);
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        #cta-main i { font-size: 28px; color: #ffffff; }
+        #cta-main:hover { transform: scale(1.1); box-shadow: 0 6px 25px rgba(230,126,34,0.6); }
+        .ringing { animation: ring 1.5s ease infinite; }
+        @keyframes ring {
+            0% { transform: rotate(0) scale(1); }
+            25% { transform: rotate(10deg) scale(1.05); }
+            50% { transform: rotate(-10deg) scale(1.05); }
+            75% { transform: rotate(5deg) scale(1.02); }
+            100% { transform: rotate(0) scale(1); }
+        }
+        #cta-main::before {
+            content: '';
+            position: absolute;
+            top: -5px;
+            left: -5px;
+            right: -5px;
+            bottom: -5px;
+            border-radius: 50%;
+            background: rgba(230,126,34,0.4);
+            z-index: -1;
+            animation: glow 2s ease infinite;
+        }
+        @keyframes glow {
+            0% { opacity: 0.3; transform: scale(1); }
+            50% { opacity: 0.6; transform: scale(1.1); }
+            100% { opacity: 0.3; transform: scale(1); }
+        }
+        #cta-options {
+            display: none;
+            flex-direction: column;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+        .cta-option {
+            background: #001338;
+            color: #fff;
+            padding: 12px 18px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 600;
+            white-space: nowrap;
+            transition: all 0.3s;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        }
+        .cta-option:hover {
+            background: #e67e22;
+            color: #001338;
+            transform: translateX(-5px);
+        }
+        
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .portfolio-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .stats__grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        @media (max-width: 768px) {
+            .mobile-toggle { display: flex; }
+            .nav-menu { display: none; }
+            .page-hero { margin-top: 70px; padding: 100px 0 50px; }
+            .portfolio-grid { grid-template-columns: 1fr; }
+            .footer-wrap { grid-template-columns: 1fr; text-align: center; }
+            .nav-logo { justify-content: center; }
+            .social-icons { justify-content: center; }
+            .footer-bottom { flex-direction: column; align-items: center; }
+            .legal-links { justify-content: center; }
+            .stats__grid { grid-template-columns: 1fr; gap: 20px; }
+        }
+        
+        /* Reveal Animation */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.7s ease, transform 0.7s ease;
+        }
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5V5S8TT3"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<!-- Drawer Overlay -->
+<div class="drawer-overlay" id="drawerOverlay"></div>
+
+<!-- Mobile Drawer Navigation -->
+<div class="nav-drawer" id="navDrawer">
+    <div class="drawer-header">
+        <button class="drawer-close" id="drawerClose"><i class="fas fa-times"></i></button>
+    </div>
+    <div class="drawer-logo">
+        <img src="logo.png" alt="Vintech Digital Services">
+    </div>
+    <div class="drawer-nav">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="blogs.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+    <div class="drawer-contact">
+        <a href="contact.html" class="drawer-btn">Get a Quote</a>
+    </div>
+</div>
+
+<!-- HEADER -->
+<header>
+    <div class="logo">
+        <img src="logo.png" alt="Vintech Digital Services Logo">
+    </div>
+    <nav>
+        <ul class="nav-menu" id="navMenu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="portfolio.html" class="btn-contact">Portfolio</a></li>
+            <li><a href="blogs.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    <div class="mobile-toggle" id="mobileToggle">
+        <span></span><span></span><span></span>
+    </div>
+</header>
+
+<main>
+    <!-- PAGE HERO -->
+    <section class="page-hero">
+        <div class="container">
+            <h1>Our Portfolio</h1>
+            <p>Explore our successful projects and see how we've helped businesses grow with custom digital solutions.</p>
+        </div>
+    </section>
+
+    <!-- PORTFOLIO GRID -->
+    <section class="portfolio-section">
+        <div class="container">
+            <div class="portfolio-header reveal">
+                <span class="section-label">Our Work</span>
+                <h2>Projects We've Delivered</h2>
+                <p>A showcase of our best work across different industries and solutions</p>
+            </div>
+            
+            <div class="portfolio-grid">
+                <!-- Project 1 - Certificate Generation System -->
+                <div class="portfolio-card">
+                    <div class="card-image">
+                        <img src="project1.jpg" alt="Certificate Generation System" loading="lazy">
+                        <div class="card-overlay">
+                            <span class="card-tag">Certificate Portal</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <h3>Certificate Generation System</h3>
+                        <p>Automated bulk certificate generation portal for a training institute — complete with custom branding and PDF export.</p>
+                        <div class="card-buttons">
+                            <a href="project1.html" class="btn-learn">Learn more about this project →</a>
+                            <button class="btn-enquire enquire-btn" data-service="Certificate Generation System">Enquire about this →</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 2 - Certificate Verification Portal -->
+                <div class="portfolio-card">
+                    <div class="card-image">
+                        <img src="project2.png" alt="Certificate Verification Portal" loading="lazy">
+                        <div class="card-overlay">
+                            <span class="card-tag">Verification System</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <h3>Certificate Verification Portal</h3>
+                        <p>Secure certificate verification system with unique identifiers that allows instant authentication of issued certificates to prevent fraud.</p>
+                        <div class="card-buttons">
+                            <a href="project2.html" class="btn-learn">Learn more about this project →</a>
+                            <button class="btn-enquire enquire-btn" data-service="Certificate Verification Portal">Enquire about this →</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 3 - Healthcare Website -->
+                <div class="portfolio-card">
+                    <div class="card-image">
+                        <img src="project3.png" alt="Healthcare & Nursing Services Website" loading="lazy">
+                        <div class="card-overlay">
+                            <span class="card-tag">Healthcare Website</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <h3>Healthcare & Nursing Services Website</h3>
+                        <p>Professional healthcare website for a nursing services brand with appointment booking, service showcase, and patient management features.</p>
+                        <div class="card-buttons">
+                            <a href="project3.html" class="btn-learn">Learn more about this project →</a>
+                            <button class="btn-enquire enquire-btn" data-service="Healthcare Website">Enquire about this →</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 4 - UDUF Africa LMS -->
+                <div class="portfolio-card">
+                    <div class="card-image">
+                        <img src="project4.png" alt="UDUF Africa LMS & Certification Platform" loading="lazy">
+                        <div class="card-overlay">
+                            <span class="card-tag">LMS Platform</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <h3>UDUF Africa LMS & Certification Platform</h3>
+                        <p>Complete learning management system for an NGO where users learn and automatically generate certificates upon course completion.</p>
+                        <div class="card-buttons">
+                            <a href="project4.html" class="btn-learn">Learn more about this project →</a>
+                            <button class="btn-enquire enquire-btn" data-service="LMS Platform">Enquire about this →</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 5 - UDUF Africa Main Website -->
+                <div class="portfolio-card">
+                    <div class="card-image">
+                        <img src="project5.jpg" alt="UDUF Africa NGO Website" loading="lazy">
+                        <div class="card-overlay">
+                            <span class="card-tag">NGO Website</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <h3>UDUF Africa - Official NGO Website</h3>
+                        <p>Full-featured website for UDUF Africa, an NGO focused on community development. Includes donation system, event calendar, volunteer registration, and impact stories.</p>
+                        <div class="card-buttons">
+                            <a href="project5.html" class="btn-learn">Learn more about this project →</a>
+                            <button class="btn-enquire enquire-btn" data-service="UDUF Africa Website">Enquire about this →</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 6 - Wedding Invitation Portal -->
+                <div class="portfolio-card">
+                    <div class="card-image">
+                        <img src="project6.jpg" alt="Wedding Invitation Portal" loading="lazy">
+                        <div class="card-overlay">
+                            <span class="card-tag">Wedding Portal</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <h3>Wedding Invitation & RSVP Portal</h3>
+                        <p>Beautiful digital wedding invitation portal with guest management, RSVP tracking, event schedule, photo gallery, and gift registry integration.</p>
+                        <div class="card-buttons">
+                            <a href="project6.html" class="btn-learn">Learn more about this project →</a>
+                            <button class="btn-enquire enquire-btn" data-service="Wedding Invitation Portal">Enquire about this →</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- STATS SECTION - Navy Blue Cards -->
+    <section class="stats-section" id="stats">
+        <div class="container">
+            <div class="stats__grid">
+                <div class="stat-card">
+                    <i class="fas fa-code"></i>
+                    <span class="stat__num" data-count="25">0</span><span class="stat__plus">+</span>
+                    <p>Projects Delivered</p>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-chart-line"></i>
+                    <span class="stat__num" data-count="5">0</span><span class="stat__plus">+</span>
+                    <p>Industries Served</p>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-smile"></i>
+                    <span class="stat__num" data-count="98">0</span><span class="stat__plus">%</span>
+                    <p>Client Satisfaction</p>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-calendar-alt"></i>
+                    <span class="stat__num" data-count="2">0</span><span class="stat__plus">+</span>
+                    <p>Years Experience</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- CTA SECTION -->
+    <section class="cta-section reveal">
+        <div class="container">
+            <h2>Ready to Start Your Project?</h2>
+            <p>Let's discuss how we can bring your vision to life with a custom digital solution.</p>
+            <a href="contact.html" class="cta-btn">Get a Free Quote <i class="fas fa-arrow-right"></i></a>
+        </div>
+    </section>
+</main>
+
+<!-- FOOTER -->
+<footer>
+    <div class="footer-wrap">
+        <div class="col">
+            <div class="nav-logo">
+                <img src="logo.png" alt="VINTECH Logo">
+                
+            </div>
+            <p>Premium digital solutions that transform brands and drive measurable business growth.</p>
+            <p><i class="fas fa-phone"></i> <a href="tel:+2348124022971">+234 812 402 2971</a></p>
+            <p><i class="fas fa-envelope"></i> <a href="mailto:vintechdigitalservices@gmail.com">vintechdigitalservices@gmail.com</a></p>
+        </div>
+        <div class="col">
+            <h4>Quick Links</h4>
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="services.html">Our Services</a>
+            <a href="portfolio.html">Portfolio</a>
+            <a href="blogs.html">Blog</a>
+            <a href="contact.html">Contact Us</a>
+        </div>
+        <div class="col">
+            <h4>Our Services</h4>
+            <div class="service-list">
+                <p>Website Development</p>
+                <p>E-Commerce Stores</p>
+                <p>Certificate Portals</p>
+                <p>SEO Optimization</p>
+                <p>Landing Pages</p>
+            </div>
+        </div>
+        <div class="col">
+            <h4>Connect With Us</h4>
+            <div class="social-icons">
+                <a href="https://wa.me/2348124022971" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                <a href="https://www.facebook.com/share/1DBb1LC5XD/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/vintechdigitalservices?igsh=MXgyOTZneHVwODMwaQ==" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.tiktok.com/@vintech.digital.s?_r=1&_t=ZS-91PyPIfnPF4" target="_blank"><i class="fab fa-tiktok"></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <div class="legal-links">
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="terms.html">Terms of Service</a>
+        </div>
+        <div class="copyright">
+            © 2025 Vintech Digital Services. All rights reserved.
+        </div>
+    </div>
+</footer>
+
+<!-- SERVICE MODAL -->
+<div class="modal" id="serviceModal">
+    <div class="modal-content">
+        <span class="modal-close">&times;</span>
+        <h2>Request a Quote</h2>
+        <p>Service: <strong id="selectedService"></strong></p>
+        <form id="hireForm">
+            <div><label>Full Name *</label><input type="text" name="fullName" required></div>
+            <div><label>Phone *</label><input type="tel" name="phoneNumber" required></div>
+            <div><label>Email *</label><input type="email" name="email" required></div>
+            <div><label>Business Name *</label><input type="text" name="businessName" required></div>
+            <div>
+                <label>Type of Business *</label>
+                <select id="businessType" name="businessType" required>
+                    <option value="" disabled selected>Select business type</option>
+                    <option value="ecommerce">E-commerce</option>
+                    <option value="service">Service</option>
+                    <option value="tech">Tech</option>
+                    <option value="education">Education</option>
+                    <option value="fitness">Physical Fitness</option>
+                    <option value="food">Food & Beverage</option>
+                    <option value="fashion">Fashion</option>
+                    <option value="beauty">Beauty</option>
+                    <option value="real-estate">Real Estate</option>
+                    <option value="entertainment">Entertainment</option>
+                    <option value="travel">Travel & Tourism</option>
+                    <option value="finance">Finance</option>
+                    <option value="consulting">Consulting</option>
+                    <option value="transport">Transportation</option>
+                    <option value="healthcare">Healthcare</option>
+                    <option value="home-services">Home Services</option>
+                    <option value="marketing">Marketing</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+            <div id="otherBusinessTypeWrapper" style="display:none;">
+                <label>Specify Business Type *</label>
+                <input type="text" id="otherBusinessType" name="otherBusinessType" placeholder="e.g. Logistics">
+            </div>
+            <div>
+                <label>Service Needed *</label>
+                <select id="serviceSelect" name="serviceNeeded" required>
+                    <option value="" disabled selected>Select a service</option>
+                    <option>Business Website Development</option>
+                    <option>E-Commerce Store Development</option>
+                    <option>Landing Page Design</option>
+                    <option>Certificate Generation Portal</option>
+                    <option>Certificate Verification Portal</option>
+                    <option>SEO Setup & Optimization</option>
+                </select>
+            </div>
+            <div>
+                <label>Your Message *</label>
+                <textarea name="message" rows="4" placeholder="Tell us about your project requirements..." required></textarea>
+            </div>
+            <button type="submit" class="modal-submit" id="submitBtn">Submit Request</button>
+        </form>
+    </div>
+</div>
+
+<!-- FLOATING PHONE CTA BUTTON -->
+<div id="global-cta">
+    <div id="cta-main" class="ringing">
+        <i class="fas fa-phone-alt"></i>
+    </div>
+    <div id="cta-options">
+        <a href="strategy.html" class="cta-option">📅 Book Free Strategy Session</a>
+        <a href="https://wa.me/2348124022971?text=Hello%20Vintech%20Digital%20Services%2C%20I%20got%20your%20contact%20info%20from%20your%20website%20and%20I'm%20interested%20in%20your%20services." target="_blank" class="cta-option">💬 Chat Our Team</a>
+        <a href="tel:+2348124022971" class="cta-option">📞 Call Us Now</a>
+        <a href="faq.html" class="cta-option">❓ FAQs</a>
+        <a href="contact.html" class="cta-option">📝 Drop Feedback</a>
+    </div>
+</div>
+
+<script type="module">
+    // Mobile Drawer Functions
+    const mobileToggleBtn = document.getElementById('mobileToggle');
+    const navDrawer = document.getElementById('navDrawer');
+    const drawerOverlay = document.getElementById('drawerOverlay');
+    const drawerCloseBtn = document.getElementById('drawerClose');
+    
+    function openDrawer() {
+        navDrawer.classList.add('open');
+        drawerOverlay.classList.add('active');
+        document.body.style.overflow = 'hidden';
+        if (mobileToggleBtn) mobileToggleBtn.classList.add('active');
+    }
+    
+    function closeDrawer() {
+        navDrawer.classList.remove('open');
+        drawerOverlay.classList.remove('active');
+        document.body.style.overflow = '';
+        if (mobileToggleBtn) mobileToggleBtn.classList.remove('active');
+    }
+    
+    if (mobileToggleBtn) {
+        mobileToggleBtn.addEventListener('click', openDrawer);
+    }
+    if (drawerCloseBtn) {
+        drawerCloseBtn.addEventListener('click', closeDrawer);
+    }
+    if (drawerOverlay) {
+        drawerOverlay.addEventListener('click', closeDrawer);
+    }
+    document.querySelectorAll('.drawer-nav a').forEach(link => {
+        link.addEventListener('click', closeDrawer);
+    });
+    
+    // Original mobile toggle for backward compatibility
+    const mobileToggle = document.getElementById('mobileToggle');
+    const navMenu = document.getElementById('navMenu');
+    if (mobileToggle) { mobileToggle.addEventListener('click', () => { navMenu.classList.toggle('active'); document.body.style.overflow = navMenu.classList.contains('active') ? 'hidden' : ''; }); }
+    document.querySelectorAll('.nav-menu a').forEach(link => link.addEventListener('click', () => { navMenu.classList.remove('active'); document.body.style.overflow = ''; }));
+    
+    // Scroll Reveal for Header and CTA
+    const revealElements = document.querySelectorAll('.reveal');
+    const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                revealObserver.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.15 });
+    revealElements.forEach(el => revealObserver.observe(el));
+    
+    // Portfolio Card Right Slide Animation - Active when each card enters viewport
+    const portfolioCards = document.querySelectorAll('.portfolio-card');
+    const cardObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const index = Array.from(portfolioCards).indexOf(entry.target);
+                setTimeout(() => {
+                    entry.target.classList.add('visible');
+                }, index * 100);
+                cardObserver.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.2 });
+    portfolioCards.forEach(card => cardObserver.observe(card));
+    
+    // Stats Card Scroll Animation
+    const statCards = document.querySelectorAll('.stat-card');
+    const statObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                statObserver.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.3 });
+    statCards.forEach(card => statObserver.observe(card));
+    
+    // Counter Animation for Stats
+    function animateCounters() {
+        const counters = document.querySelectorAll('.stat__num');
+        const counterObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const counter = entry.target;
+                    const target = parseInt(counter.getAttribute('data-count'));
+                    let current = 0;
+                    const duration = 2000;
+                    const increment = target / (duration / 16);
+                    const updateCounter = () => {
+                        current += increment;
+                        if (current < target) {
+                            counter.textContent = Math.floor(current);
+                            requestAnimationFrame(updateCounter);
+                        } else {
+                            counter.textContent = target;
+                        }
+                    };
+                    updateCounter();
+                    counterObserver.unobserve(counter);
+                }
+            });
+        }, { threshold: 0.5 });
+        counters.forEach(counter => counterObserver.observe(counter));
+    }
+    
+    const statsSection = document.querySelector('.stats-section');
+    if (statsSection) {
+        const sectionObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateCounters();
+                    sectionObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.3 });
+        sectionObserver.observe(statsSection);
+    }
+    
+    // Modal Logic
+    const modal = document.getElementById('serviceModal');
+    const enquireBtns = document.querySelectorAll('.enquire-btn');
+    const closeBtn = document.querySelector('.modal-close');
+    const selectedServiceSpan = document.getElementById('selectedService');
+    const serviceSelect = document.getElementById('serviceSelect');
+    const businessTypeSelect = document.getElementById('businessType');
+    const otherBusinessWrapper = document.getElementById('otherBusinessTypeWrapper');
+    const hireForm = document.getElementById('hireForm');
+    const submitBtn = document.getElementById('submitBtn');
+    
+    if (businessTypeSelect) {
+        businessTypeSelect.addEventListener('change', () => {
+            if (businessTypeSelect.value === 'other') {
+                otherBusinessWrapper.style.display = 'block';
+            } else {
+                otherBusinessWrapper.style.display = 'none';
+            }
+        });
+    }
+    
+    enquireBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const service = btn.getAttribute('data-service');
+            if (selectedServiceSpan) selectedServiceSpan.textContent = service;
+            if (serviceSelect) serviceSelect.value = service;
+            if (modal) modal.style.display = 'block';
+            document.body.style.overflow = 'hidden';
+        });
+    });
+    
+    if (closeBtn) {
+        closeBtn.addEventListener('click', () => {
+            modal.style.display = 'none';
+            document.body.style.overflow = '';
+        });
+    }
+    
+    window.addEventListener('click', (e) => {
+        if (e.target === modal) {
+            modal.style.display = 'none';
+            document.body.style.overflow = '';
+        }
+    });
+    
+    // Firebase Submission
+    const db = window.db;
+    const collection = window.collection;
+    const addDoc = window.addDoc;
+    const serverTimestamp = window.serverTimestamp;
+    
+    if (hireForm) {
+        hireForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            if (submitBtn) {
+                submitBtn.disabled = true;
+                submitBtn.textContent = 'Submitting...';
+            }
+            
+            try {
+                const formData = new FormData(hireForm);
+                const data = Object.fromEntries(formData.entries());
+                data.createdAt = serverTimestamp();
+                data.pageSource = 'portfolio.html';
+                
+                await addDoc(collection(db, "agency-order"), data);
+                window.location.href = "thanks.html";
+            } catch (err) {
+                alert("Submission failed: " + err.message);
+                if (submitBtn) {
+                    submitBtn.disabled = false;
+                    submitBtn.textContent = 'Submit Request';
+                }
+            }
+        });
+    }
+    
+    // Floating CTA Functions
+    let ringTimeout;
+    const ctaMain = document.getElementById('cta-main');
+    const ctaOptions = document.getElementById('cta-options');
+    
+    function toggleCTAMenu() {
+        if (ctaOptions) {
+            if (ctaOptions.style.display === 'flex') {
+                ctaOptions.style.display = 'none';
+                if (ctaMain && !ctaMain.classList.contains('ringing')) {
+                    ctaMain.classList.add('ringing');
+                    clearTimeout(ringTimeout);
+                    ringTimeout = setTimeout(() => {
+                        if (ctaMain) ctaMain.classList.remove('ringing');
+                    }, 3000);
+                }
+            } else {
+                ctaOptions.style.display = 'flex';
+                if (ctaMain) {
+                    ctaMain.classList.remove('ringing');
+                    clearTimeout(ringTimeout);
+                }
+            }
+        }
+    }
+    
+    if (ctaMain) {
+        ctaMain.addEventListener('click', toggleCTAMenu);
+    }
+    
+    function startRingingCycle() {
+        if (ctaMain && ctaOptions && ctaOptions.style.display !== 'flex' && !ctaMain.classList.contains('ringing')) {
+            ctaMain.classList.add('ringing');
+            ringTimeout = setTimeout(() => {
+                if (ctaMain) ctaMain.classList.remove('ringing');
+                setTimeout(startRingingCycle, 10000);
+            }, 3000);
+        } else {
+            setTimeout(startRingingCycle, 5000);
+        }
+    }
+    
+    setTimeout(startRingingCycle, 5000);
+    
+    document.addEventListener('click', function(event) {
+        if (ctaOptions && ctaMain && ctaOptions.style.display === 'flex' && 
+            !ctaMain.contains(event.target) && 
+            !ctaOptions.contains(event.target)) {
+            ctaOptions.style.display = 'none';
+            if (ctaMain && !ctaMain.classList.contains('ringing')) {
+                ctaMain.classList.add('ringing');
+                clearTimeout(ringTimeout);
+                ringTimeout = setTimeout(() => {
+                    if (ctaMain) ctaMain.classList.remove('ringing');
+                }, 3000);
+            }
+        }
+    });
+</script>
+</body>
+</html>

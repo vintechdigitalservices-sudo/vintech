@@ -1,0 +1,1535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-5V5S8TT3');</script>
+    <!-- End Google Tag Manager -->
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="logo.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="logo.png">
+    
+    <!-- Primary SEO Tags -->
+    <title>Pricing | Vintech Digital Services - Transparent Web Development Pricing</title>
+    <meta name="title" content="Pricing - Web Development & Software Solutions | Vintech Digital Services">
+    <meta name="description" content="Transparent pricing for custom websites, e-commerce stores, certificate portals, and software solutions. Get a free quote tailored to your business needs.">
+    <meta name="keywords" content="web development pricing, website cost Nigeria, e-commerce pricing, certificate portal cost, Vintech pricing">
+    <meta name="author" content="Vintech Digital Services">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://vintechdigitalservices.com/pricing.html">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://vintechdigitalservices.com/pricing.html">
+    <meta property="og:title" content="Pricing - Web Development & Software Solutions">
+    <meta property="og:description" content="Transparent pricing for custom websites, e-commerce stores, certificate portals, and software solutions. Get a free quote tailored to your business needs.">
+    <meta property="og:image" content="https://vintechdigitalservices.com/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:site_name" content="Vintech Digital Services">
+    <meta property="og:locale" content="en_NG">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://vintechdigitalservices.com/pricing.html">
+    <meta name="twitter:title" content="Pricing - Web Development & Software Solutions">
+    <meta name="twitter:description" content="Transparent pricing for custom websites, e-commerce stores, certificate portals, and software solutions.">
+    <meta name="twitter:image" content="https://vintechdigitalservices.com/og-image.jpg">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #ffffff;
+            color: #001F54;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        /* Header */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.98);
+            padding: 5px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        .logo img {
+            height: 56px;
+            width: auto;
+        }
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+            align-items: center;
+        }
+        .nav-menu a {
+            text-decoration: none;
+            color: #475569;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.3s;
+        }
+        .nav-menu a:hover {
+            color: #e67e22;
+        }
+        .btn-contact {
+            background: #e67e22;
+            color: #fff !important;
+            padding: 8px 20px;
+            border-radius: 4px;
+        }
+        .mobile-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            z-index: 1001;
+        }
+        .mobile-toggle span {
+            width: 25px;
+            height: 3px;
+            background: #001F54;
+            border-radius: 2px;
+            transition: 0.3s;
+        }
+        
+        /* Mobile Drawer Navigation */
+        .nav-drawer {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 85%;
+            max-width: 320px;
+            height: 100%;
+            background: #001F54;
+            z-index: 1002;
+            transition: right 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            padding: 30px 25px;
+            display: flex;
+            flex-direction: column;
+            box-shadow: -5px 0 30px rgba(0, 0, 0, 0.3);
+        }
+        .nav-drawer.open { right: 0; }
+        .drawer-header { display: flex; justify-content: flex-end; margin-bottom: 40px; }
+        .drawer-close {
+            background: rgba(255,255,255,0.1);
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: background 0.3s;
+            color: white;
+            font-size: 1.2rem;
+        }
+        .drawer-close:hover { background: #e67e22; }
+        .drawer-logo { text-align: center; margin-bottom: 40px; }
+        .drawer-logo img { height: 60px; width: auto; }
+        .drawer-nav { flex: 1; }
+        .drawer-nav ul { list-style: none; padding: 0; }
+        .drawer-nav li { margin-bottom: 25px; }
+        .drawer-nav a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: 500;
+            display: block;
+            padding: 8px 0;
+            transition: color 0.3s, transform 0.2s;
+        }
+        .drawer-nav a:hover { color: #e67e22; transform: translateX(5px); }
+        .drawer-contact { margin-top: auto; padding-top: 30px; border-top: 1px solid rgba(255,255,255,0.1); }
+        .drawer-contact .drawer-btn {
+            display: block;
+            background: #e67e22;
+            color: #ffffff;
+            text-align: center;
+            padding: 14px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background 0.3s;
+        }
+        .drawer-contact .drawer-btn:hover { background: #d35400; }
+        .drawer-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1001;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s, visibility 0.3s;
+        }
+        .drawer-overlay.active { opacity: 1; visibility: visible; }
+        
+        /* Page Hero */
+        .page-hero {
+            background: linear-gradient(135deg, #001F54 0%, #001338 100%);
+            padding: 140px 0 60px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            margin-top: 70px;
+        }
+        .page-hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 80%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(230,126,34,0.08) 0%, transparent 70%);
+            animation: float 20s ease-in-out infinite;
+        }
+        @keyframes float {
+            0%, 100% { transform: translate(0, 0); }
+            50% { transform: translate(-20px, -20px); }
+        }
+        .page-hero h1 {
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 800;
+            color: #ffffff;
+            margin-bottom: 15px;
+            animation: slideDown 0.8s ease;
+        }
+        .page-hero p {
+            font-size: 1rem;
+            color: #cbd5e1;
+            max-width: 600px;
+            margin: 0 auto;
+            animation: slideUp 0.8s ease 0.2s forwards;
+            opacity: 0;
+            animation-fill-mode: forwards;
+        }
+        @keyframes slideDown {
+            from { opacity: 0; transform: translateY(-30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        /* Pricing Info Note - Attention Grabbing */
+        .pricing-note {
+            text-align: center;
+            margin-bottom: 50px;
+            padding: 25px 30px;
+            background: linear-gradient(135deg, #fff8f0 0%, #fff 100%);
+            border-radius: 16px;
+            border: 2px solid #e67e22;
+            position: relative;
+            overflow: hidden;
+        }
+        .pricing-note::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(230,126,34,0.1), transparent);
+            animation: shimmer 3s infinite;
+        }
+        @keyframes shimmer {
+            0% { left: -100%; }
+            100% { left: 200%; }
+        }
+        .pricing-note i {
+            font-size: 1.8rem;
+            color: #e67e22;
+            display: block;
+            margin-bottom: 12px;
+        }
+        .pricing-note h3 {
+            font-size: 1.3rem;
+            font-weight: 800;
+            color: #001F54;
+            margin-bottom: 10px;
+        }
+        .pricing-note p {
+            color: #475569;
+            font-size: 1rem;
+        }
+        .pricing-note a {
+            color: #e67e22;
+            font-weight: 700;
+            text-decoration: none;
+        }
+        .pricing-note a:hover {
+            text-decoration: underline;
+        }
+        
+        /* Pricing Grid */
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+        .pricing-card {
+            background: #ffffff;
+            border-radius: 24px;
+            overflow: hidden;
+            transition: all 0.4s;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+            border: 1px solid #e2e8f0;
+            position: relative;
+        }
+        .pricing-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+            border-color: #e67e22;
+        }
+        .pricing-card.featured {
+            border: 2px solid #e67e22;
+            transform: scale(1.02);
+        }
+        .pricing-card.featured:hover {
+            transform: scale(1.02) translateY(-8px);
+        }
+        .card-header {
+            background: #f8fafc;
+            padding: 30px;
+            text-align: center;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        .card-header h3 {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: #001F54;
+            margin-bottom: 10px;
+        }
+        .price {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: #e67e22;
+            margin: 15px 0;
+        }
+        .price span {
+            font-size: 0.9rem;
+            font-weight: 400;
+            color: #64748b;
+        }
+        .price-blur {
+            filter: blur(3px);
+            display: inline-block;
+            cursor: pointer;
+            transition: filter 0.3s;
+        }
+        .price-blur:hover {
+            filter: blur(0);
+        }
+        .price-slash {
+            text-decoration: line-through;
+            color: #cbd5e1;
+            font-size: 1.2rem;
+            margin-right: 10px;
+        }
+        .badge {
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #e67e22;
+            color: #ffffff;
+            padding: 5px 15px;
+            border-radius: 30px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            white-space: nowrap;
+        }
+        .card-body {
+            padding: 30px;
+        }
+        .feature-list {
+            list-style: none;
+            margin-bottom: 30px;
+        }
+        .feature-list li {
+            padding: 10px 0;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: #475569;
+            font-size: 0.9rem;
+            border-bottom: 1px solid #f1f5f9;
+        }
+        .feature-list li:last-child {
+            border-bottom: none;
+        }
+        .feature-list li i {
+            width: 20px;
+            color: #e67e22;
+            font-size: 0.9rem;
+        }
+        .feature-list li i.fa-times {
+            color: #cbd5e1;
+        }
+        .card-footer {
+            padding: 0 30px 30px;
+            text-align: center;
+        }
+        .quote-btn {
+            display: inline-block;
+            background: #e67e22;
+            color: #ffffff;
+            padding: 12px 24px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            width: 100%;
+            text-align: center;
+            cursor: pointer;
+            border: none;
+        }
+        .quote-btn:hover {
+            background: #d35400;
+            transform: translateY(-2px);
+        }
+        .quote-btn-outline {
+            display: inline-block;
+            background: transparent;
+            color: #e67e22;
+            border: 2px solid #e67e22;
+            padding: 12px 24px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            width: 100%;
+            text-align: center;
+            cursor: pointer;
+        }
+        .quote-btn-outline:hover {
+            background: #e67e22;
+            color: #ffffff;
+            transform: translateY(-2px);
+        }
+        
+        /* Blur hint */
+        .blur-hint {
+            font-size: 0.7rem;
+            color: #94a3b8;
+            margin-top: 5px;
+            font-style: italic;
+        }
+        
+        /* What Affects Pricing */
+        .factors-section {
+            background: #f8fafc;
+            padding: 60px 0;
+            margin: 40px 0;
+            border-radius: 24px;
+        }
+        .factors-title {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .factors-title h2 {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: #001F54;
+            margin-bottom: 10px;
+        }
+        .factors-title p {
+            color: #64748b;
+        }
+        .factors-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+        }
+        .factor-card {
+            text-align: center;
+            padding: 25px;
+            background: #ffffff;
+            border-radius: 16px;
+            transition: all 0.3s;
+        }
+        .factor-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+        }
+        .factor-icon {
+            width: 60px;
+            height: 60px;
+            background: rgba(230,126,34,0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 15px;
+        }
+        .factor-icon i {
+            font-size: 28px;
+            color: #e67e22;
+        }
+        .factor-card h4 {
+            font-size: 1rem;
+            font-weight: 700;
+            color: #001F54;
+            margin-bottom: 8px;
+        }
+        .factor-card p {
+            font-size: 0.85rem;
+            color: #64748b;
+        }
+        
+        /* FAQ Teaser */
+        .faq-teaser {
+            text-align: center;
+            margin-top: 50px;
+            padding: 40px;
+            background: #ffffff;
+            border-radius: 24px;
+            border: 1px solid #e2e8f0;
+        }
+        .faq-teaser h3 {
+            font-size: 1.3rem;
+            font-weight: 800;
+            color: #001F54;
+            margin-bottom: 15px;
+        }
+        .faq-teaser p {
+            color: #64748b;
+            margin-bottom: 20px;
+        }
+        
+        /* Footer */
+        footer {
+            background: #001338;
+            color: #ffffff;
+            padding: 60px 5% 30px;
+            margin-top: 60px;
+        }
+        .footer-wrap {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 50px;
+        }
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        .nav-logo img {
+            height: 45px;
+            width: auto;
+        }
+        .nav-logo span {
+            font-size: 1.3rem;
+            font-weight: 700;
+        }
+        .col p {
+            font-size: 0.9rem;
+            line-height: 1.6;
+            opacity: 0.85;
+            margin-bottom: 12px;
+        }
+        .col p i {
+            width: 25px;
+            color: #e67e22;
+        }
+        .col p a {
+            color: #ffffff;
+            text-decoration: none;
+        }
+        .col h4 {
+            font-size: 1rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: #e67e22;
+        }
+        .col a {
+            display: block;
+            color: #ffffff;
+            text-decoration: none;
+            margin-bottom: 12px;
+            font-size: 0.9rem;
+            opacity: 0.8;
+            transition: all 0.3s;
+        }
+        .col a:hover {
+            opacity: 1;
+            transform: translateX(5px);
+        }
+        .service-list p {
+            margin-bottom: 8px;
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+        .service-list p:hover {
+            opacity: 1;
+        }
+        .social-icons {
+            display: flex;
+            gap: 15px;
+            margin-top: 15px;
+            justify-content: center;
+        }
+        .social-icons a {
+            width: 40px;
+            height: 40px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0;
+            transition: all 0.3s;
+        }
+        .social-icons a i {
+            font-size: 1.2rem;
+        }
+        .social-icons a:hover {
+            background: #e67e22;
+            transform: translateY(-3px);
+        }
+        .footer-bottom {
+            max-width: 1200px;
+            margin: 40px auto 0;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.15);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 10px;
+            text-align: center;
+        }
+        .legal-links {
+            display: flex;
+            gap: 18px;
+            justify-content: center;
+        }
+        .legal-links a {
+            font-size: 0.8rem;
+            color: #ffffff;
+            opacity: 0.7;
+            text-decoration: none;
+        }
+        .legal-links a:hover {
+            opacity: 1;
+        }
+        .copyright {
+            font-size: 0.8rem;
+            opacity: 0.7;
+            text-align: center;
+        }
+        
+        /* Floating CTA */
+        #global-cta {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 9999;
+            display: flex;
+            flex-direction: column-reverse;
+            align-items: flex-end;
+            gap: 12px;
+        }
+        #cta-main {
+            width: 60px;
+            height: 60px;
+            background: #e67e22;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 4px 20px rgba(230,126,34,0.5);
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        #cta-main i { font-size: 28px; color: #ffffff; }
+        #cta-main:hover { transform: scale(1.1); box-shadow: 0 6px 25px rgba(230,126,34,0.6); }
+        .ringing { animation: ring 1.5s ease infinite; }
+        @keyframes ring {
+            0% { transform: rotate(0) scale(1); }
+            25% { transform: rotate(10deg) scale(1.05); }
+            50% { transform: rotate(-10deg) scale(1.05); }
+            75% { transform: rotate(5deg) scale(1.02); }
+            100% { transform: rotate(0) scale(1); }
+        }
+        #cta-main::before {
+            content: '';
+            position: absolute;
+            top: -5px;
+            left: -5px;
+            right: -5px;
+            bottom: -5px;
+            border-radius: 50%;
+            background: rgba(230,126,34,0.4);
+            z-index: -1;
+            animation: glow 2s ease infinite;
+        }
+        @keyframes glow {
+            0% { opacity: 0.3; transform: scale(1); }
+            50% { opacity: 0.6; transform: scale(1.1); }
+            100% { opacity: 0.3; transform: scale(1); }
+        }
+        #cta-options {
+            display: none;
+            flex-direction: column;
+            gap: 10px;
+            margin-bottom: 10px;
+            animation: fadeInUp 0.3s ease forwards;
+        }
+        #cta-options.hide {
+            animation: fadeOutDown 0.3s ease forwards;
+        }
+        .cta-option {
+            background: #001338;
+            color: #fff;
+            padding: 12px 18px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 600;
+            white-space: nowrap;
+            transition: all 0.3s;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+            opacity: 0;
+            transform: translateY(20px);
+            animation: slideInOption 0.25s ease forwards;
+        }
+        .cta-option:nth-child(1) { animation-delay: 0.05s; }
+        .cta-option:nth-child(2) { animation-delay: 0.1s; }
+        .cta-option:nth-child(3) { animation-delay: 0.15s; }
+        .cta-option:nth-child(4) { animation-delay: 0.2s; }
+        .cta-option:nth-child(5) { animation-delay: 0.25s; }
+        @keyframes slideInOption {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @keyframes fadeOutDown {
+            from {
+                opacity: 1;
+                transform: translateY(0);
+            }
+            to {
+                opacity: 0;
+                transform: translateY(20px);
+                visibility: hidden;
+            }
+        }
+        
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .pricing-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .factors-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        @media (max-width: 768px) {
+            .mobile-toggle { display: flex; }
+            .nav-menu { display: none; }
+            .page-hero { margin-top: 70px; padding: 120px 0 50px; }
+            .pricing-grid { grid-template-columns: 1fr; }
+            .factors-grid { grid-template-columns: 1fr; }
+            .pricing-card.featured { transform: scale(1); }
+            .pricing-card.featured:hover { transform: translateY(-8px); }
+            .footer-wrap { grid-template-columns: 1fr; text-align: center; }
+            .nav-logo { justify-content: center; }
+            .social-icons { justify-content: center; }
+            .footer-bottom { flex-direction: column; align-items: center; }
+            .legal-links { justify-content: center; }
+        }
+        
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.7s ease, transform 0.7s ease;
+        }
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 10000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.8);
+            overflow-y: auto;
+        }
+        .modal-content {
+            background-color: #ffffff;
+            margin: 50px auto;
+            padding: 40px;
+            width: 90%;
+            max-width: 600px;
+            border-radius: 24px;
+            position: relative;
+            animation: modalSlideIn 0.3s ease;
+        }
+        @keyframes modalSlideIn {
+            from { transform: translateY(-50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        .modal-close {
+            position: absolute;
+            right: 20px;
+            top: 20px;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+            color: #64748b;
+            transition: color 0.2s;
+        }
+        .modal-close:hover {
+            color: #e67e22;
+        }
+        .modal-content h2 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: #001F54;
+        }
+        .modal-content form div {
+            margin-bottom: 20px;
+        }
+        .modal-content label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #334155;
+        }
+        .modal-content input,
+        .modal-content select,
+        .modal-content textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1.5px solid #e2e8f0;
+            border-radius: 12px;
+            font-size: 0.95rem;
+        }
+        .modal-submit {
+            width: 100%;
+            padding: 14px;
+            background: #e67e22;
+            color: #ffffff;
+            border: none;
+            border-radius: 12px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        .modal-submit:hover {
+            background: #d35400;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5V5S8TT3"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<!-- Drawer Overlay -->
+<div class="drawer-overlay" id="drawerOverlay"></div>
+
+<!-- Mobile Drawer Navigation -->
+<div class="nav-drawer" id="navDrawer">
+    <div class="drawer-header">
+        <button class="drawer-close" id="drawerClose"><i class="fas fa-times"></i></button>
+    </div>
+    <div class="drawer-logo">
+        <img src="logo.png" alt="Vintech Digital Services">
+    </div>
+    <div class="drawer-nav">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="blogs.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+    <div class="drawer-contact">
+        <a href="contact.html" class="drawer-btn">Get a Quote</a>
+    </div>
+</div>
+
+<!-- HEADER -->
+<header>
+    <div class="logo">
+        <img src="logo.png" alt="Vintech Digital Services Logo">
+    </div>
+    <nav>
+        <ul class="nav-menu" id="navMenu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="blogs.html">Blog</a></li>
+            <li><a href="contact.html" class="btn-contact">Contact</a></li>
+        </ul>
+    </nav>
+    <div class="mobile-toggle" id="mobileToggle">
+        <span></span><span></span><span></span>
+    </div>
+</header>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+    <div class="container">
+        <h1>Simple, Transparent Pricing</h1>
+        <p>Custom solutions tailored to your business needs. No hidden fees. No surprises.</p>
+    </div>
+</section>
+
+<!-- PRICING SECTION -->
+<section class="pricing-section" style="padding: 60px 0;">
+    <div class="container">
+        <div class="pricing-note reveal">
+            <i class="fas fa-gem"></i>
+            <h3>⚠️ Every Project Is Unique — Here's Why</h3>
+            <p>No two businesses are the same. Your website or portal is built specifically for YOUR needs. The prices below are estimated starting ranges. Your final quote will depend on your exact requirements. <a href="#" id="disclaimerQuoteBtn">Click here to get an accurate quote →</a></p>
+        </div>
+        
+        <div class="pricing-grid">
+            <!-- Starter Package - NEW -->
+            <div class="pricing-card reveal">
+                <div class="card-header">
+                    <h3>Starter Website</h3>
+                    <div class="price">₦150,000 <span>and above</span></div>
+                    <p style="font-size: 0.85rem; color: #64748b;">Perfect for startups and new businesses</p>
+                </div>
+                <div class="card-body">
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check"></i> 3-5 Pages (Home, About, Services, Contact)</li>
+                        <li><i class="fas fa-check"></i> Fully Responsive Design</li>
+                        <li><i class="fas fa-check"></i> Basic SEO Setup</li>
+                        <li><i class="fas fa-check"></i> Contact Form Integration</li>
+                        <li><i class="fas fa-check"></i> WhatsApp & Social Media Links</li>
+                        <li><i class="fas fa-check"></i> 1 Month Free Support</li>
+                        <li><i class="fas fa-times"></i> E-Commerce Functionality</li>
+                        <li><i class="fas fa-times"></i> CMS / Blog</li>
+                    </ul>
+                </div>
+                <div class="card-footer">
+                    <button class="quote-btn" data-package="Starter Website">Get a Quote</button>
+                </div>
+            </div>
+            
+            <!-- Basic Website Card -->
+            <div class="pricing-card reveal">
+                <div class="card-header">
+                    <h3>Basic Website</h3>
+                    <div class="price">₦250,000 <span>and above</span></div>
+                    <p style="font-size: 0.85rem; color: #64748b;">Great for established small businesses</p>
+                </div>
+                <div class="card-body">
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check"></i> 5-7 Pages (Home, About, Services, Contact, etc.)</li>
+                        <li><i class="fas fa-check"></i> Fully Responsive Design</li>
+                        <li><i class="fas fa-check"></i> SEO Optimized Structure</li>
+                        <li><i class="fas fa-check"></i> Contact Form Integration</li>
+                        <li><i class="fas fa-check"></i> WhatsApp & Social Media Links</li>
+                        <li><i class="fas fa-check"></i> 1 Month Free Support</li>
+                        <li><i class="fas fa-times"></i> E-Commerce Functionality</li>
+                        <li><i class="fas fa-times"></i> CMS / Blog</li>
+                    </ul>
+                </div>
+                <div class="card-footer">
+                    <button class="quote-btn" data-package="Basic Website">Get a Quote</button>
+                </div>
+            </div>
+            
+            <!-- Business Website Card (Featured) -->
+            <div class="pricing-card featured reveal">
+                <div class="badge">Most Popular</div>
+                <div class="card-header">
+                    <h3>Business Website</h3>
+                    <div class="price">₦500,000 <span>and above</span></div>
+                    <p style="font-size: 0.85rem; color: #64748b;">Best for growing businesses</p>
+                </div>
+                <div class="card-body">
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check"></i> Up to 10 Pages</li>
+                        <li><i class="fas fa-check"></i> Fully Responsive Design</li>
+                        <li><i class="fas fa-check"></i> Advanced SEO Optimization</li>
+                        <li><i class="fas fa-check"></i> Contact & Enquiry Forms</li>
+                        <li><i class="fas fa-check"></i> WhatsApp & Social Integration</li>
+                        <li><i class="fas fa-check"></i> Blog / News Section</li>
+                        <li><i class="fas fa-check"></i> Google Analytics Setup</li>
+                        <li><i class="fas fa-check"></i> 3 Months Free Support</li>
+                    </ul>
+                </div>
+                <div class="card-footer">
+                    <button class="quote-btn" data-package="Business Website">Get a Quote</button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Second Row -->
+        <div class="pricing-grid" style="margin-top: 30px;">
+            <!-- E-Commerce Card -->
+            <div class="pricing-card reveal">
+                <div class="card-header">
+                    <h3>E-Commerce Store</h3>
+                    <div class="price">₦750,000 <span>and above</span></div>
+                    <p style="font-size: 0.85rem; color: #64748b;">Sell products online</p>
+                </div>
+                <div class="card-body">
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check"></i> Unlimited Products</li>
+                        <li><i class="fas fa-check"></i> Shopping Cart & Checkout</li>
+                        <li><i class="fas fa-check"></i> Payment Gateway Integration</li>
+                        <li><i class="fas fa-check"></i> Product Categories & Filters</li>
+                        <li><i class="fas fa-check"></i> Order Management System</li>
+                        <li><i class="fas fa-check"></i> Customer Accounts</li>
+                        <li><i class="fas fa-check"></i> Full SEO Optimization</li>
+                        <li><i class="fas fa-check"></i> 3 Months Free Support</li>
+                    </ul>
+                </div>
+                <div class="card-footer">
+                    <button class="quote-btn" data-package="E-Commerce Store">Get a Quote</button>
+                </div>
+            </div>
+            
+            <!-- Certificate Portal Card (Blurred Price) -->
+            <div class="pricing-card reveal">
+                <div class="card-header">
+                    <h3>Certificate Portal</h3>
+                    <div class="price">
+                        <span class="price-slash">₦1,200,000</span>
+                        <span class="price-blur">Request Quote</span>
+                    </div>
+                    <p style="font-size: 0.85rem; color: #64748b;">For schools & training institutes</p>
+                    <div class="blur-hint">Hover to reveal | Custom pricing based on needs</div>
+                </div>
+                <div class="card-body">
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check"></i> Certificate Generation System</li>
+                        <li><i class="fas fa-check"></i> Verification Portal Integration</li>
+                        <li><i class="fas fa-check"></i> Student/User Management</li>
+                        <li><i class="fas fa-check"></i> Unique Certificate IDs</li>
+                        <li><i class="fas fa-check"></i> PDF Certificate Export</li>
+                        <li><i class="fas fa-check"></i> Admin Dashboard</li>
+                        <li><i class="fas fa-check"></i> 6 Months Free Support</li>
+                    </ul>
+                </div>
+                <div class="card-footer">
+                    <button class="quote-btn" data-package="Certificate Portal">Get a Quote</button>
+                </div>
+            </div>
+            
+            <!-- LMS Platform Card (Blurred Price) -->
+            <div class="pricing-card reveal">
+                <div class="card-header">
+                    <h3>LMS Platform</h3>
+                    <div class="price">
+                        <span class="price-slash">₦1,500,000</span>
+                        <span class="price-blur">Request Quote</span>
+                    </div>
+                    <p style="font-size: 0.85rem; color: #64748b;">Complete learning management system</p>
+                    <div class="blur-hint">Hover to reveal | Custom pricing based on needs</div>
+                </div>
+                <div class="card-body">
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check"></i> Course Management</li>
+                        <li><i class="fas fa-check"></i> Student Enrollment</li>
+                        <li><i class="fas fa-check"></i> Progress Tracking</li>
+                        <li><i class="fas fa-check"></i> Quiz & Assessment System</li>
+                        <li><i class="fas fa-check"></i> Auto-Certificate Generation</li>
+                        <li><i class="fas fa-check"></i> Admin Dashboard</li>
+                        <li><i class="fas fa-check"></i> 6 Months Free Support</li>
+                    </ul>
+                </div>
+                <div class="card-footer">
+                    <button class="quote-btn" data-package="LMS Platform">Get a Quote</button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Custom Solution Row -->
+        <div class="pricing-grid" style="margin-top: 30px;">
+            <div class="pricing-card reveal">
+                <div class="card-header">
+                    <h3>Custom Solution</h3>
+                    <div class="price">Custom Quote</div>
+                    <p style="font-size: 0.85rem; color: #64748b;">Tailored to your exact needs</p>
+                </div>
+                <div class="card-body">
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check"></i> Bespoke Web Application</li>
+                        <li><i class="fas fa-check"></i> Custom Software Development</li>
+                        <li><i class="fas fa-check"></i> Database Integration</li>
+                        <li><i class="fas fa-check"></i> API Development</li>
+                        <li><i class="fas fa-check"></i> Third-Party Integrations</li>
+                        <li><i class="fas fa-check"></i> Scalable Architecture</li>
+                        <li><i class="fas fa-check"></i> Ongoing Support Available</li>
+                    </ul>
+                </div>
+                <div class="card-footer">
+                    <button class="quote-btn-outline" data-package="Custom Solution">Contact Us</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- WHAT AFFECTS PRICING -->
+<section class="factors-section">
+    <div class="container">
+        <div class="factors-title reveal">
+            <h2>What Determines Your Project Cost?</h2>
+            <p>Every project is unique. Here's what influences your final quote</p>
+        </div>
+        <div class="factors-grid">
+            <div class="factor-card reveal">
+                <div class="factor-icon"><i class="fas fa-file-alt"></i></div>
+                <h4>Number of Pages</h4>
+                <p>More pages = more content and development time</p>
+            </div>
+            <div class="factor-card reveal">
+                <div class="factor-icon"><i class="fas fa-puzzle-piece"></i></div>
+                <h4>Features & Complexity</h4>
+                <p>Custom features, integrations, and functionality</p>
+            </div>
+            <div class="factor-card reveal">
+                <div class="factor-icon"><i class="fas fa-mobile-alt"></i></div>
+                <h4>Responsive Design</h4>
+                <p>Mobile optimization across all devices</p>
+            </div>
+            <div class="factor-card reveal">
+                <div class="factor-icon"><i class="fas fa-search"></i></div>
+                <h4>SEO Requirements</h4>
+                <p>Search engine optimization and content strategy</p>
+            </div>
+            <div class="factor-card reveal">
+                <div class="factor-icon"><i class="fas fa-database"></i></div>
+                <h4>Database Setup</h4>
+                <p>User accounts, content management, data storage</p>
+            </div>
+            <div class="factor-card reveal">
+                <div class="factor-icon"><i class="fas fa-plug"></i></div>
+                <h4>Third-Party Integrations</h4>
+                <p>Payment gateways, APIs, external services</p>
+            </div>
+            <div class="factor-card reveal">
+                <div class="factor-icon"><i class="fas fa-clock"></i></div>
+                <h4>Timeline</h4>
+                <p>Urgent projects may require expedited delivery</p>
+            </div>
+            <div class="factor-card reveal">
+                <div class="factor-icon"><i class="fas fa-headset"></i></div>
+                <h4>Support & Maintenance</h4>
+                <p>Post-launch support and ongoing maintenance</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ TEASER -->
+<section style="padding: 0 0 60px;">
+    <div class="container">
+        <div class="faq-teaser reveal">
+            <h3>Still Have Questions About Pricing?</h3>
+            <p>We're happy to provide a detailed, no-obligation quote based on your specific needs.</p>
+            <button class="quote-btn" style="display: inline-block; width: auto; padding: 12px 32px;" data-package="General Inquiry">Request a Free Quote →</button>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <div class="footer-wrap">
+        <div class="col">
+            <div class="nav-logo">
+                <img src="logo.png" alt="VINTECH Logo">
+                
+            </div>
+            <p>Premium digital solutions that transform brands and drive measurable business growth.</p>
+            <p><i class="fas fa-phone"></i> <a href="tel:+2348124022971">+234 812 402 2971</a></p>
+            <p><i class="fas fa-envelope"></i> <a href="mailto:vintechdigitalservices@gmail.com">vintechdigitalservices@gmail.com</a></p>
+        </div>
+        <div class="col">
+            <h4>Quick Links</h4>
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="services.html">Our Services</a>
+            <a href="portfolio.html">Portfolio</a>
+            <a href="blogs.html">Blog</a>
+            <a href="contact.html">Contact Us</a>
+        </div>
+        <div class="col">
+            <h4>Our Services</h4>
+            <div class="service-list">
+                <p>Website Development</p>
+                <p>E-Commerce Stores</p>
+                <p>Certificate Portals</p>
+                <p>SEO Optimization</p>
+                <p>Landing Pages</p>
+            </div>
+        </div>
+        <div class="col">
+            <h4>Connect With Us</h4>
+            <div class="social-icons">
+                <a href="https://wa.me/2348124022971" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                <a href="https://www.facebook.com/share/1DBb1LC5XD/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/vintechdigitalservices?igsh=MXgyOTZneHVwODMwaQ==" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.tiktok.com/@vintech.digital.s?_r=1&_t=ZS-91PyPIfnPF4" target="_blank"><i class="fab fa-tiktok"></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <div class="legal-links">
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="terms.html">Terms of Service</a>
+        </div>
+        <div class="copyright">
+            © 2026 Vintech Digital Services. All rights reserved.
+        </div>
+    </div>
+</footer>
+
+<!-- FLOATING PHONE CTA BUTTON -->
+<div id="global-cta">
+    <div id="cta-main" class="ringing">
+        <i class="fas fa-phone-alt"></i>
+    </div>
+    <div id="cta-options">
+        <a href="strategy.html" class="cta-option">📅 Book Free Strategy Session</a>
+        <a href="https://wa.me/2348124022971?text=Hello%20Vintech%20Digital%20Services%2C%20I%20got%20your%20contact%20info%20from%20your%20website%20and%20I'm%20interested%20in%20your%20services." target="_blank" class="cta-option">💬 Chat Our Team</a>
+        <a href="tel:+2348124022971" class="cta-option">📞 Call Us Now</a>
+        <a href="faq.html" class="cta-option">❓ FAQs</a>
+        <a href="contact.html" class="cta-option">📝 Drop Feedback</a>
+    </div>
+</div>
+
+<!-- MODAL -->
+<div class="modal" id="quoteModal">
+    <div class="modal-content">
+        <span class="modal-close">&times;</span>
+        <h2>Request a Quote</h2>
+        <p>Package: <strong id="selectedPackage"></strong></p>
+        <form id="quoteForm">
+            <div><label>Full Name *</label><input type="text" name="fullName" required></div>
+            <div><label>Phone *</label><input type="tel" name="phoneNumber" required></div>
+            <div><label>Email *</label><input type="email" name="email" required></div>
+            <div><label>Business Name *</label><input type="text" name="businessName" required></div>
+            <div>
+                <label>Type of Business *</label>
+                <select id="businessType" name="businessType" required>
+                    <option value="" disabled selected>Select business type</option>
+                    <option value="ecommerce">E-commerce</option>
+                    <option value="service">Service</option>
+                    <option value="tech">Tech</option>
+                    <option value="education">Education</option>
+                    <option value="healthcare">Healthcare</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+            <div id="otherBusinessTypeWrapper" style="display:none;">
+                <label>Specify Business Type *</label>
+                <input type="text" id="otherBusinessType" name="otherBusinessType" placeholder="e.g. Logistics">
+            </div>
+            <div>
+                <label>Service Needed *</label>
+                <select id="serviceSelect" name="serviceNeeded" required>
+                    <option value="" disabled selected>Select a service</option>
+                    <option>Starter Website</option>
+                    <option>Basic Website</option>
+                    <option>Business Website</option>
+                    <option>E-Commerce Store</option>
+                    <option>Certificate Portal</option>
+                    <option>LMS Platform</option>
+                    <option>Custom Solution</option>
+                </select>
+            </div>
+            <div>
+                <label>Your Message *</label>
+                <textarea name="message" rows="4" placeholder="Tell us about your project requirements..." required></textarea>
+            </div>
+            <button type="submit" class="modal-submit" id="modalSubmitBtn">Submit Request</button>
+        </form>
+    </div>
+</div>
+
+<script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+    import { getFirestore, collection, addDoc, serverTimestamp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
+    
+    const firebaseConfig = {
+        apiKey: "AIzaSyBBZfUSIlJKUaHV05t-x1B4J-cXQJtcXEs",
+        authDomain: "vintech-backend.firebaseapp.com",
+        projectId: "vintech-backend",
+        storageBucket: "vintech-backend.firebasestorage.app",
+        messagingSenderId: "891897245100",
+        appId: "1:891897245100:web:9f935a6337831c5a649e09"
+    };
+    
+    const app = initializeApp(firebaseConfig);
+    const db = getFirestore(app);
+    
+    // Mobile Drawer Functions
+    const mobileToggleBtn = document.getElementById('mobileToggle');
+    const navDrawer = document.getElementById('navDrawer');
+    const drawerOverlay = document.getElementById('drawerOverlay');
+    const drawerCloseBtn = document.getElementById('drawerClose');
+    
+    function openDrawer() {
+        navDrawer.classList.add('open');
+        drawerOverlay.classList.add('active');
+        document.body.style.overflow = 'hidden';
+        if (mobileToggleBtn) mobileToggleBtn.classList.add('active');
+    }
+    
+    function closeDrawer() {
+        navDrawer.classList.remove('open');
+        drawerOverlay.classList.remove('active');
+        document.body.style.overflow = '';
+        if (mobileToggleBtn) mobileToggleBtn.classList.remove('active');
+    }
+    
+    if (mobileToggleBtn) {
+        mobileToggleBtn.addEventListener('click', openDrawer);
+    }
+    if (drawerCloseBtn) {
+        drawerCloseBtn.addEventListener('click', closeDrawer);
+    }
+    if (drawerOverlay) {
+        drawerOverlay.addEventListener('click', closeDrawer);
+    }
+    document.querySelectorAll('.drawer-nav a').forEach(link => {
+        link.addEventListener('click', closeDrawer);
+    });
+    
+    // Scroll Reveal
+    const revealElements = document.querySelectorAll('.reveal');
+    const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                revealObserver.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.15 });
+    revealElements.forEach(el => revealObserver.observe(el));
+    
+    // Modal Logic
+    const modal = document.getElementById('quoteModal');
+    const modalClose = document.querySelector('.modal-close');
+    const selectedPackageSpan = document.getElementById('selectedPackage');
+    const serviceSelect = document.getElementById('serviceSelect');
+    const businessTypeSelect = document.getElementById('businessType');
+    const otherBusinessWrapper = document.getElementById('otherBusinessTypeWrapper');
+    const quoteForm = document.getElementById('quoteForm');
+    const modalSubmitBtn = document.getElementById('modalSubmitBtn');
+    
+    if (businessTypeSelect) {
+        businessTypeSelect.addEventListener('change', () => {
+            if (businessTypeSelect.value === 'other') {
+                otherBusinessWrapper.style.display = 'block';
+            } else {
+                otherBusinessWrapper.style.display = 'none';
+            }
+        });
+    }
+    
+    // Open modal with package name
+    const quoteBtns = document.querySelectorAll('.quote-btn, .quote-btn-outline');
+    quoteBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const packageName = btn.getAttribute('data-package') || 'General Inquiry';
+            if (selectedPackageSpan) selectedPackageSpan.textContent = packageName;
+            if (serviceSelect) serviceSelect.value = packageName;
+            if (modal) modal.style.display = 'block';
+            document.body.style.overflow = 'hidden';
+        });
+    });
+    
+    // Disclaimer link also opens modal
+    const disclaimerQuoteBtn = document.getElementById('disclaimerQuoteBtn');
+    if (disclaimerQuoteBtn) {
+        disclaimerQuoteBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            if (selectedPackageSpan) selectedPackageSpan.textContent = 'General Inquiry';
+            if (serviceSelect) serviceSelect.value = 'General Inquiry';
+            if (modal) modal.style.display = 'block';
+            document.body.style.overflow = 'hidden';
+        });
+    }
+    
+    if (modalClose) {
+        modalClose.addEventListener('click', () => {
+            modal.style.display = 'none';
+            document.body.style.overflow = '';
+        });
+    }
+    
+    window.addEventListener('click', (e) => {
+        if (e.target === modal) {
+            modal.style.display = 'none';
+            document.body.style.overflow = '';
+        }
+    });
+    
+    // Form Submission to Firebase "agency-order"
+    if (quoteForm) {
+        quoteForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            if (modalSubmitBtn) {
+                modalSubmitBtn.disabled = true;
+                modalSubmitBtn.textContent = 'Submitting...';
+            }
+            
+            try {
+                const formData = new FormData(quoteForm);
+                const data = Object.fromEntries(formData.entries());
+                data.createdAt = serverTimestamp();
+                data.pageSource = 'pricing.html';
+                
+                await addDoc(collection(db, "agency-order"), data);
+                window.location.href = "thanks.html";
+            } catch (err) {
+                alert("Submission failed: " + err.message);
+                if (modalSubmitBtn) {
+                    modalSubmitBtn.disabled = false;
+                    modalSubmitBtn.textContent = 'Submit Request';
+                }
+            }
+        });
+    }
+    
+    // Floating CTA Functions
+    let ringTimeout;
+    const ctaMain = document.getElementById('cta-main');
+    const ctaOptions = document.getElementById('cta-options');
+    
+    function toggleCTAMenu() {
+        if (ctaOptions) {
+            if (ctaOptions.style.display === 'flex') {
+                ctaOptions.classList.add('hide');
+                setTimeout(() => {
+                    ctaOptions.style.display = 'none';
+                    ctaOptions.classList.remove('hide');
+                }, 300);
+                if (ctaMain && !ctaMain.classList.contains('ringing')) {
+                    ctaMain.classList.add('ringing');
+                    clearTimeout(ringTimeout);
+                    ringTimeout = setTimeout(() => {
+                        if (ctaMain) ctaMain.classList.remove('ringing');
+                    }, 3000);
+                }
+            } else {
+                ctaOptions.style.display = 'flex';
+                ctaOptions.classList.remove('hide');
+                if (ctaMain) {
+                    ctaMain.classList.remove('ringing');
+                    clearTimeout(ringTimeout);
+                }
+            }
+        }
+    }
+    
+    if (ctaMain) {
+        ctaMain.addEventListener('click', toggleCTAMenu);
+    }
+    
+    function startRingingCycle() {
+        if (ctaMain && ctaOptions && ctaOptions.style.display !== 'flex' && !ctaMain.classList.contains('ringing')) {
+            ctaMain.classList.add('ringing');
+            ringTimeout = setTimeout(() => {
+                if (ctaMain) ctaMain.classList.remove('ringing');
+                setTimeout(startRingingCycle, 10000);
+            }, 3000);
+        } else {
+            setTimeout(startRingingCycle, 5000);
+        }
+    }
+    
+    setTimeout(startRingingCycle, 5000);
+    
+    document.addEventListener('click', function(event) {
+        if (ctaOptions && ctaMain && ctaOptions.style.display === 'flex' && 
+            !ctaMain.contains(event.target) && 
+            !ctaOptions.contains(event.target)) {
+            ctaOptions.classList.add('hide');
+            setTimeout(() => {
+                ctaOptions.style.display = 'none';
+                ctaOptions.classList.remove('hide');
+            }, 300);
+            if (ctaMain && !ctaMain.classList.contains('ringing')) {
+                ctaMain.classList.add('ringing');
+                clearTimeout(ringTimeout);
+                ringTimeout = setTimeout(() => {
+                    if (ctaMain) ctaMain.classList.remove('ringing');
+                }, 3000);
+            }
+        }
+    });
+</script>
+</body>
+</html>

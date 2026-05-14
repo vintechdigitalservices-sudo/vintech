@@ -1,0 +1,1131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    
+    <!-- Primary SEO Tags -->
+    <title>About Vintech Digital Services | Custom Web & Software Development</title>
+    <meta name="title" content="About Vintech Digital Services - Custom Web Development & Software Solutions">
+    <meta name="description" content="Vintech Digital Services builds custom websites, e-commerce stores, certificate portals, and digital systems that solve real operational problems for businesses, schools, and organizations.">
+    <meta name="keywords" content="web development company Nigeria, custom software development, certificate portal, e-commerce development, Vintech about">
+    <meta name="author" content="Vintech Digital Services">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <meta name="googlebot" content="index, follow">
+    <meta name="language" content="English">
+    <meta name="revisit-after" content="7 days">
+    <meta name="distribution" content="global">
+    <meta name="rating" content="general">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://vintechdigitalservices.com/about.html">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://vintechdigitalservices.com/about.html">
+    <meta property="og:title" content="About Vintech Digital Services | Custom Web & Software Development">
+    <meta property="og:description" content="Vintech Digital Services builds custom websites, e-commerce stores, certificate portals, and digital systems that solve real operational problems.">
+    <meta property="og:image" content="https://vintechdigitalservices.com/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:site_name" content="Vintech Digital Services">
+    <meta property="og:locale" content="en_NG">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://vintechdigitalservices.com/about.html">
+    <meta name="twitter:title" content="About Vintech Digital Services | Custom Web & Software Development">
+    <meta name="twitter:description" content="Vintech Digital Services builds custom websites, e-commerce stores, certificate portals, and digital systems that solve real operational problems.">
+    <meta name="twitter:image" content="https://vintechdigitalservices.com/og-image.jpg">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #ffffff;
+            color: #001F54;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        /* Header */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.98);
+            padding: 5px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        .logo img {
+            height: 56px;
+            width: auto;
+        }
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+            align-items: center;
+        }
+        .nav-menu a {
+            text-decoration: none;
+            color: #475569;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.3s;
+        }
+        .nav-menu a:hover {
+            color: #e67e22;
+        }
+        .btn-contact {
+            background: #e67e22;
+            color: #fff !important;
+            padding: 8px 20px;
+            border-radius: 4px;
+        }
+        .mobile-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            z-index: 1001;
+        }
+        .mobile-toggle span {
+            width: 25px;
+            height: 3px;
+            background: #001F54;
+            border-radius: 2px;
+            transition: 0.3s;
+        }
+        .mobile-toggle.active span:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+        .mobile-toggle.active span:nth-child(2) {
+            opacity: 0;
+        }
+        .mobile-toggle.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(7px, -6px);
+        }
+        
+        /* Mobile Navigation Drawer */
+        .nav-drawer {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 85%;
+            max-width: 320px;
+            height: 100%;
+            background: #001F54;
+            z-index: 1002;
+            transition: right 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            padding: 30px 25px;
+            display: flex;
+            flex-direction: column;
+            box-shadow: -5px 0 30px rgba(0, 0, 0, 0.3);
+        }
+        .nav-drawer.open {
+            right: 0;
+        }
+        .drawer-header {
+            display: flex;
+            justify-content: flex-end;
+            margin-bottom: 40px;
+        }
+        .drawer-close {
+            background: rgba(255,255,255,0.1);
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .drawer-close i {
+            font-size: 1.2rem;
+            color: #ffffff;
+        }
+        .drawer-close:hover {
+            background: #e67e22;
+        }
+        .drawer-logo {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .drawer-logo img {
+            height: 60px;
+            width: auto;
+        }
+        .drawer-nav {
+            flex: 1;
+        }
+        .drawer-nav ul {
+            list-style: none;
+            padding: 0;
+        }
+        .drawer-nav li {
+            margin-bottom: 25px;
+        }
+        .drawer-nav a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: 500;
+            display: block;
+            padding: 8px 0;
+            transition: color 0.3s, transform 0.2s;
+        }
+        .drawer-nav a:hover {
+            color: #e67e22;
+            transform: translateX(5px);
+        }
+        .drawer-contact {
+            margin-top: auto;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+        .drawer-contact .drawer-btn {
+            display: block;
+            background: #e67e22;
+            color: #ffffff;
+            text-align: center;
+            padding: 14px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background 0.3s;
+        }
+        .drawer-contact .drawer-btn:hover {
+            background: #d35400;
+        }
+        .drawer-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1001;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s, visibility 0.3s;
+        }
+        .drawer-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        /* Page Hero */
+        .page-hero {
+            background: linear-gradient(135deg, #001F54 0%, #001338 100%);
+            padding: 140px 0 80px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .page-hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 80%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(230,126,34,0.08) 0%, transparent 70%);
+            animation: float 20s ease-in-out infinite;
+        }
+        @keyframes float {
+            0%, 100% { transform: translate(0, 0); }
+            50% { transform: translate(-20px, -20px); }
+        }
+        .page-hero h1 {
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 800;
+            color: #ffffff;
+            margin-bottom: 20px;
+        }
+        .page-hero p {
+            font-size: 1.1rem;
+            color: #cbd5e1;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        /* Section Label */
+        .section-label {
+            display: inline-block;
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: #e67e22;
+            background: rgba(230,126,34,0.1);
+            padding: 6px 14px;
+            border-radius: 100px;
+            margin-bottom: 16px;
+        }
+        
+        /* About Story */
+        .about-story {
+            padding: 80px 0;
+            background: #ffffff;
+        }
+        .story-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+        .story-image {
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        .story-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.5s;
+        }
+        .story-image:hover img {
+            transform: scale(1.02);
+        }
+        .story-content h2 {
+            font-size: clamp(1.8rem, 3vw, 2.3rem);
+            font-weight: 800;
+            color: #001F54;
+            margin-bottom: 20px;
+        }
+        .story-content p {
+            color: #475569;
+            margin-bottom: 20px;
+            line-height: 1.7;
+        }
+        
+        /* Vision & Mission */
+        .vision-mission {
+            padding: 80px 0;
+            background: #f8fafc;
+        }
+        .vm-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+        .vm-card {
+            background: #ffffff;
+            border-radius: 24px;
+            padding: 45px 35px;
+            text-align: center;
+            transition: all 0.4s;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+        }
+        .vm-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        .vm-icon {
+            width: 70px;
+            height: 70px;
+            background: rgba(230,126,34,0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 24px;
+        }
+        .vm-icon i {
+            font-size: 32px;
+            color: #e67e22;
+        }
+        .vm-card h3 {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: #001F54;
+            margin-bottom: 16px;
+        }
+        .vm-card p {
+            color: #475569;
+            line-height: 1.7;
+        }
+        
+        /* Core Values */
+        .core-values {
+            padding: 80px 0;
+            background: #ffffff;
+        }
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        .section-header h2 {
+            font-size: clamp(1.8rem, 3vw, 2.3rem);
+            font-weight: 800;
+            color: #001F54;
+        }
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+        .value-card {
+            background: #f8fafc;
+            border-radius: 20px;
+            padding: 35px;
+            text-align: center;
+            transition: all 0.4s;
+            border: 1px solid #e2e8f0;
+        }
+        .value-card:hover {
+            transform: translateY(-5px);
+            border-color: #e67e22;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+        }
+        .value-icon {
+            width: 60px;
+            height: 60px;
+            background: rgba(230,126,34,0.1);
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+        }
+        .value-icon i {
+            font-size: 28px;
+            color: #e67e22;
+        }
+        .value-card h3 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #001F54;
+            margin-bottom: 12px;
+        }
+        .value-card p {
+            color: #64748b;
+            font-size: 0.9rem;
+            line-height: 1.65;
+        }
+        
+        /* Stats Section */
+        .stats-section {
+            padding: 60px 0;
+            background: #f8fafc;
+        }
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+        }
+        .stat-card {
+            text-align: center;
+            padding: 40px 20px;
+            background: #001F54;
+            border-radius: 20px;
+            transition: all 0.4s;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        }
+        .stat-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+        }
+        .stat-card i {
+            font-size: 2.5rem;
+            color: #e67e22;
+            margin-bottom: 15px;
+        }
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: #ffffff;
+            display: inline-block;
+        }
+        .stat-plus {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #e67e22;
+            margin-left: 5px;
+        }
+        .stat-card p {
+            font-size: 0.9rem;
+            color: #cbd5e1;
+            margin-top: 8px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        
+        /* Aims & Objectives */
+        .aims-objectives {
+            padding: 80px 0;
+            background: #ffffff;
+        }
+        .aims-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+        }
+        .aims-card, .objectives-card {
+            background: #f8fafc;
+            border-radius: 20px;
+            padding: 40px;
+            border-left: 4px solid #e67e22;
+        }
+        .aims-card h3, .objectives-card h3 {
+            font-size: 1.3rem;
+            font-weight: 800;
+            color: #001F54;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .aims-card h3 i, .objectives-card h3 i {
+            color: #e67e22;
+            font-size: 1.5rem;
+        }
+        .aims-card ul, .objectives-card ul {
+            list-style: none;
+            padding: 0;
+        }
+        .aims-card li, .objectives-card li {
+            padding: 12px 0;
+            border-bottom: 1px solid #e2e8f0;
+            color: #475569;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .aims-card li:last-child, .objectives-card li:last-child {
+            border-bottom: none;
+        }
+        .aims-card li i, .objectives-card li i {
+            color: #e67e22;
+            font-size: 0.9rem;
+        }
+        
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, #001F54 0%, #001338 100%);
+            padding: 80px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -20%;
+            width: 140%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(230,126,34,0.05) 0%, transparent 70%);
+            animation: float 25s ease-in-out infinite;
+        }
+        .cta-section h2 {
+            font-size: clamp(1.8rem, 3vw, 2.3rem);
+            color: #ffffff;
+            margin-bottom: 15px;
+            position: relative;
+            z-index: 1;
+        }
+        .cta-section p {
+            color: #cbd5e1;
+            margin-bottom: 30px;
+            position: relative;
+            z-index: 1;
+        }
+        .cta-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: #e67e22;
+            color: #ffffff;
+            padding: 14px 35px;
+            border-radius: 14px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: all 0.3s;
+            position: relative;
+            z-index: 1;
+            overflow: hidden;
+        }
+        .cta-btn::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.2);
+            transform: translate(-50%, -50%);
+            transition: width 0.6s, height 0.6s;
+        }
+        .cta-btn:hover::before {
+            width: 300px;
+            height: 300px;
+        }
+        .cta-btn:hover {
+            background: #d35400;
+            transform: translateY(-3px);
+        }
+        
+        /* Footer */
+        footer {
+            background: #001338;
+            color: #ffffff;
+            padding: 60px 5% 30px;
+        }
+        .footer-wrap {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 50px;
+        }
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        .nav-logo img {
+            height: 45px;
+            width: auto;
+        }
+        .nav-logo span {
+            font-size: 1.3rem;
+            font-weight: 700;
+        }
+        .col p {
+            font-size: 0.9rem;
+            line-height: 1.6;
+            opacity: 0.85;
+            margin-bottom: 12px;
+        }
+        .col p i {
+            width: 25px;
+            color: #e67e22;
+        }
+        .col p a {
+            color: #ffffff;
+            text-decoration: none;
+        }
+        .col h4 {
+            font-size: 1rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: #e67e22;
+        }
+        .col a {
+            display: block;
+            color: #ffffff;
+            text-decoration: none;
+            margin-bottom: 12px;
+            font-size: 0.9rem;
+            opacity: 0.8;
+            transition: all 0.3s;
+        }
+        .col a:hover {
+            opacity: 1;
+            transform: translateX(5px);
+        }
+        .social-icons {
+            display: flex;
+            gap: 15px;
+            margin-top: 15px;
+            justify-content: center;
+        }
+        .social-icons a {
+            width: 40px;
+            height: 40px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0;
+            transition: all 0.3s;
+        }
+        .social-icons a i {
+            font-size: 1.2rem;
+        }
+        .social-icons a:hover {
+            background: #e67e22;
+            transform: translateY(-3px);
+        }
+        .footer-bottom {
+            max-width: 1200px;
+            margin: 40px auto 0;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 14px;
+        }
+        .legal-links {
+            display: flex;
+            gap: 18px;
+        }
+        .legal-links a {
+            font-size: 0.8rem;
+            color: #ffffff;
+            opacity: 0.7;
+            text-decoration: none;
+        }
+        .copyright {
+            font-size: 0.8rem;
+            opacity: 0.7;
+        }
+        
+        /* Reveal Animation */
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .values-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .aims-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+        }
+        @media (max-width: 768px) {
+            .mobile-toggle {
+                display: flex;
+            }
+            .nav-menu {
+                display: none;
+            }
+            .story-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            .vm-grid {
+                grid-template-columns: 1fr;
+            }
+            .values-grid {
+                grid-template-columns: 1fr;
+            }
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+            .footer-wrap {
+                grid-template-columns: 1fr;
+                gap: 40px;
+                text-align: center;
+            }
+            .nav-logo {
+                justify-content: center;
+            }
+            .footer-bottom {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+            .legal-links {
+                justify-content: center;
+            }
+            .page-hero {
+                padding: 120px 0 60px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+    <div class="logo">
+        <img src="logo.png" alt="Vintech Digital Services Logo">
+    </div>
+    <nav>
+        <ul class="nav-menu" id="navMenu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html" class="btn-contact">About Us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    <div class="mobile-toggle" id="mobileToggle">
+        <span></span><span></span><span></span>
+    </div>
+</header>
+
+<!-- Mobile Navigation Drawer -->
+<div class="drawer-overlay" id="drawerOverlay"></div>
+<div class="nav-drawer" id="navDrawer">
+    <div class="drawer-header">
+        <button class="drawer-close" id="drawerClose">
+            <i class="fas fa-times"></i>
+        </button>
+    </div>
+    <div class="drawer-logo">
+        <img src="logo.png" alt="Vintech Digital Services">
+    </div>
+    <div class="drawer-nav">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Services</a></li>
+      
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+    <div class="drawer-contact">
+        <a href="contact.html" class="drawer-btn">Get a Quote</a>
+    </div>
+</div>
+
+<main>
+    <!-- PAGE HERO -->
+    <section class="page-hero">
+        <div class="container">
+            <h1>About Vintech Digital Services</h1>
+            <p>We build custom websites, portals, and digital systems that solve real operational problems.</p>
+        </div>
+    </section>
+
+    <!-- OUR STORY -->
+    <section class="about-story">
+        <div class="container">
+            <div class="story-grid">
+                <div class="story-image reveal">
+                    <img src="about-image.jpg" alt="Vintech Digital Services Team" loading="lazy">
+                </div>
+                <div class="story-content reveal">
+                    <span class="section-label">Our Story</span>
+                    <h2>Built Different. Built for Results.</h2>
+                    <p>Vintech Digital Services was founded on a simple observation: most businesses struggle to find digital solutions that actually work for their specific needs. Templates are limiting. Generic agencies overpromise and underdeliver.</p>
+                    <p>We started differently. No templates. No bloated promises. Just custom systems built from scratch to solve real operational problems. Today, we help businesses, schools, and organizations across Nigeria and beyond build digital infrastructure that works—fast, reliable, and professional.</p>
+                    <p>We don't just build websites. We build systems people actually use.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- VISION & MISSION -->
+    <section class="vision-mission">
+        <div class="container">
+            <div class="vm-grid">
+                <div class="vm-card reveal">
+                    <div class="vm-icon">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <h3>Our Vision</h3>
+                    <p>To build digital systems that make African businesses and organizations operate smarter, faster, and more professionally.</p>
+                </div>
+                <div class="vm-card reveal">
+                    <div class="vm-icon">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <h3>Our Mission</h3>
+                    <p>Vintech Digital Services builds custom websites, portals, and digital systems that solve real operational problems for businesses, schools, organizations, and brands.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CORE VALUES -->
+    <section class="core-values">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-label">What Drives Us</span>
+                <h2>Our Core Values</h2>
+            </div>
+            <div class="values-grid">
+                <div class="value-card reveal">
+                    <div class="value-icon"><i class="fas fa-cubes"></i></div>
+                    <h3>Function Over Decoration</h3>
+                    <p>We believe digital products should work effectively before trying to impress visually. Usability always comes first.</p>
+                </div>
+                <div class="value-card reveal">
+                    <div class="value-icon"><i class="fas fa-briefcase"></i></div>
+                    <h3>Professionalism</h3>
+                    <p>We communicate clearly, meet expectations, and handle projects with structure and accountability.</p>
+                </div>
+                <div class="value-card reveal">
+                    <div class="value-icon"><i class="fas fa-bolt"></i></div>
+                    <h3>Speed With Quality</h3>
+                    <p>Fast delivery means nothing if the system breaks. We balance efficiency with reliability.</p>
+                </div>
+                <div class="value-card reveal">
+                    <div class="value-icon"><i class="fas fa-brain"></i></div>
+                    <h3>Simplicity</h3>
+                    <p>We build systems people can actually understand and use without confusion or training.</p>
+                </div>
+                <div class="value-card reveal">
+                    <div class="value-icon"><i class="fas fa-chart-line"></i></div>
+                    <h3>Long-Term Thinking</h3>
+                    <p>We create solutions that can grow with the client instead of forcing constant rebuilding.</p>
+                </div>
+                <div class="value-card reveal">
+                    <div class="value-icon"><i class="fas fa-code"></i></div>
+                    <h3>Custom Systems</h3>
+                    <p>No templates. No WordPress. Every project is built from scratch with custom code for your specific needs.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- STATS SECTION -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-card reveal">
+                    <i class="fas fa-code"></i>
+                    <div>
+                        <span class="stat-number" data-count="25">0</span>
+                        <span class="stat-plus">+</span>
+                    </div>
+                    <p>Projects Delivered</p>
+                </div>
+                <div class="stat-card reveal">
+                    <i class="fas fa-chart-line"></i>
+                    <div>
+                        <span class="stat-number" data-count="5">0</span>
+                        <span class="stat-plus">+</span>
+                    </div>
+                    <p>Industries Served</p>
+                </div>
+                <div class="stat-card reveal">
+                    <i class="fas fa-users"></i>
+                    <div>
+                        <span class="stat-number" data-count="98">0</span>
+                        <span class="stat-plus">%</span>
+                    </div>
+                    <p>Client Satisfaction</p>
+                </div>
+                <div class="stat-card reveal">
+                    <i class="fas fa-calendar-alt"></i>
+                    <div>
+                        <span class="stat-number" data-count="2">0</span>
+                        <span class="stat-plus">+</span>
+                    </div>
+                    <p>Years Experience</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AIMS & OBJECTIVES -->
+    <section class="aims-objectives">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-label">Our Direction</span>
+                <h2>Where We're Headed</h2>
+            </div>
+            <div class="aims-grid">
+                <div class="aims-card reveal">
+                    <h3><i class="fas fa-flag-checkered"></i> Short-Mid Term Aims</h3>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> Become recognized for reliable custom web solutions in Nigeria</li>
+                        <li><i class="fas fa-check-circle"></i> Build authority in portal and organizational system development</li>
+                        <li><i class="fas fa-check-circle"></i> Develop long-term partnerships instead of one-time transactions</li>
+                        <li><i class="fas fa-check-circle"></i> Create digital systems that reduce manual work for clients</li>
+                        <li><i class="fas fa-check-circle"></i> Build a strong portfolio across multiple industries</li>
+                    </ul>
+                </div>
+                <div class="objectives-card reveal">
+                    <h3><i class="fas fa-chart-line"></i> Measurable Objectives</h3>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> Deliver 50+ successful projects within the next 12 months</li>
+                        <li><i class="fas fa-check-circle"></i> Maintain high client retention and referrals</li>
+                        <li><i class="fas fa-check-circle"></i> Reduce average project turnaround time</li>
+                        <li><i class="fas fa-check-circle"></i> Expand recurring revenue through maintenance plans</li>
+                        <li><i class="fas fa-check-circle"></i> Launch at least one scalable internal product/service</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA SECTION -->
+        
+    <section class="cta-section reveal">
+        <div class="container">
+            <h2>Ready to Build Something Great?</h2>
+            <p>Let's discuss your project and how we can help you operate smarter and faster.</p>
+            <a href="contact.html" class="cta-btn">Start a Conversation <i class="fas fa-arrow-right"></i></a>
+        </div>
+    </section>
+</main>
+
+<!-- FOOTER -->
+<footer>
+    <div class="footer-wrap">
+        <div class="col">
+            <div class="nav-logo">
+                <img src="logo.png" alt="VINTECH Logo">
+                
+            </div>
+            <p>Custom websites, e-commerce stores, certificate portals, and digital systems that solve real operational problems.</p>
+            <p><i class="fas fa-phone"></i> <a href="tel:+2348124022971">+234 812 402 2971</a></p>
+            <p><i class="fas fa-envelope"></i> <a href="mailto:vintechdigitalservices@gmail.com">vintechdigitalservices@gmail.com</a></p>
+        </div>
+        <div class="col">
+            <h4>Quick Links</h4>
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="services.html">Our Services</a>
+            <a href="portfolio.html">Portfolio</a>
+            <a href="contact.html">Contact Us</a>
+        </div>
+        <div class="col">
+            <h4>Our Services</h4>
+            <a>Website Development</a>
+            <a>E-Commerce Stores</a>
+            <a>Certificate Portals</a>
+            <a>SEO Optimization</a>
+            <a>Landing Pages</a>
+        </div>
+        <div class="col">
+            <h4>Connect With Us</h4>
+            <div class="social-icons">
+                <a href="https://wa.me/2348124022971" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                <a href="https://www.facebook.com/share/1DBb1LC5XD/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/vintechdigitalservices?igsh=MXgyOTZneHVwODMwaQ==" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.tiktok.com/@vintech.digital.s?_r=1&_t=ZS-91PyPIfnPF4" target="_blank"><i class="fab fa-tiktok"></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <div class="copyright">
+            © 2025 Vintech Digital Services. All rights reserved.
+        </div>
+        <div class="legal-links">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+        </div>
+    </div>
+</footer>
+
+<script>
+    // Mobile Menu Toggle with Drawer
+    const mobileToggle = document.getElementById('mobileToggle');
+    const navDrawer = document.getElementById('navDrawer');
+    const drawerOverlay = document.getElementById('drawerOverlay');
+    const drawerClose = document.getElementById('drawerClose');
+    
+    function openDrawer() {
+        navDrawer.classList.add('open');
+        drawerOverlay.classList.add('active');
+        document.body.style.overflow = 'hidden';
+        if (mobileToggle) mobileToggle.classList.add('active');
+    }
+    
+    function closeDrawer() {
+        navDrawer.classList.remove('open');
+        drawerOverlay.classList.remove('active');
+        document.body.style.overflow = '';
+        if (mobileToggle) mobileToggle.classList.remove('active');
+    }
+    
+    if (mobileToggle) {
+        mobileToggle.addEventListener('click', openDrawer);
+    }
+    
+    if (drawerClose) {
+        drawerClose.addEventListener('click', closeDrawer);
+    }
+    
+    if (drawerOverlay) {
+        drawerOverlay.addEventListener('click', closeDrawer);
+    }
+    
+    // Close drawer when clicking on a link
+    document.querySelectorAll('.drawer-nav a').forEach(link => {
+        link.addEventListener('click', closeDrawer);
+    });
+    
+    // Scroll Reveal Animation
+    const revealElements = document.querySelectorAll('.reveal');
+    const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                revealObserver.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.15 });
+    revealElements.forEach(el => revealObserver.observe(el));
+    
+    // Count-up Animation for Stats
+    function animateCounters() {
+        const counters = document.querySelectorAll('.stat-number');
+        const counterObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const counter = entry.target;
+                    const target = parseInt(counter.getAttribute('data-count'));
+                    let current = 0;
+                    const duration = 2000;
+                    const increment = target / (duration / 16);
+                    const updateCounter = () => {
+                        current += increment;
+                        if (current < target) {
+                            counter.textContent = Math.floor(current);
+                            requestAnimationFrame(updateCounter);
+                        } else {
+                            counter.textContent = target;
+                        }
+                    };
+                    updateCounter();
+                    counterObserver.unobserve(counter);
+                }
+            });
+        }, { threshold: 0.5 });
+        counters.forEach(counter => counterObserver.observe(counter));
+    }
+    
+    const statsSection = document.querySelector('.stats-section');
+    if (statsSection) {
+        const sectionObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateCounters();
+                    sectionObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.3 });
+        sectionObserver.observe(statsSection);
+    }
+</script>
+</body>
+</html>

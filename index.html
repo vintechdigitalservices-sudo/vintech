@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    
+    <title>Vintech Digital Services | Premier Web Development & Digital Solutions Nigeria</title>
+    <meta name="description" content="Vintech Digital Services: Nigeria's leading digital agency delivering high-converting websites, e-commerce stores, certificate portals, and digital solutions. Scale your business today.">
+    <meta name="keywords" content="Web Development Nigeria, E-commerce Store, Certificate Portal, SEO Services, Business Growth, Vintech Digital, SME Africa Growth">
+    <meta name="author" content="Vintech Digital Services">
+    <meta name="robots" content="index, follow">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "Vintech Digital Services",
+      "url": "https://vintechdigital.com/",
+      "logo": "https://vintechdigital.com/logo.png",
+      "description": "High-performance web development and digital solutions in Nigeria.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "NG"
+      }
+    }
+    </script>
+
+    <link rel="canonical" href="https://vintechdigital.com/">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Lora:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- PRELOADER -->
+<div class="preloader" id="preloader">
+    <div class="preloader__content">
+        <div class="preloader__logo">
+            <img src="logo.png" alt="Vintech Digital Services" loading="eager">
+        </div>
+        <p class="preloader__text">Premium Website Development & Digital Solutions</p>
+        <div class="preloader__progress-container">
+            <div class="preloader__progress-bar" id="progressBar"></div>
+        </div>
+        <div class="preloader__percentage" id="percentage">0%</div>
+    </div>
+</div>
+
+<!-- HEADER -->
+<header>
+    <div class="logo"><img src="logo.png" alt="Vintech Digital Services Logo" loading="eager"></div>
+    <nav aria-label="Main Navigation">
+        <ul class="nav-menu" id="navMenu">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#why">Why Us</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="blogs.html">Blog</a></li>
+            <li><a href="#contact" class="btn-contact">Contact</a></li>
+        </ul>
+    </nav>
+    <div class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+    </div>
+</header>
+
+<!-- Mobile Drawer Navigation -->
+<div class="nav-drawer" id="navDrawer">
+    <div class="drawer-header">
+        <button class="drawer-close" id="drawerClose"><i class="fas fa-times"></i></button>
+    </div>
+    <div class="drawer-logo">
+        <img src="logo.png" alt="Vintech Digital Services">
+    </div>
+    <div class="drawer-nav">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#why">Why Us</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="blogs.html">Blog</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </div>
+    <div class="drawer-contact">
+        <a href="#contact" class="drawer-btn">Get a Quote</a>
+    </div>
+</div>
+<div class="drawer-overlay" id="drawerOverlay"></div>
+
+<main>
+    <!-- HERO SECTION -->
+    <section class="hero" id="home">
+        <div class="hero-container">
+            <div class="hero-text">
+                <span class="hero-accent-line"></span>
+                <h1>Your Digital <span class="highlight">Growth</span> Partner</h1>
+                <p class="hero-subtext">Elevate your brand with modern websites, e-commerce stores, and custom digital solutions.</p>
+                <div class="cta-row">
+                    <a href="#services" class="btn btn-primary">Our Services</a>
+                    <a href="#contact" class="btn btn-secondary">Get a Quote</a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <img src="hero.png" alt="Vintech Digital Growth Illustration" class="hero-icon" loading="eager">
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT US SECTION -->
+    <section class="about section" id="about">
+        <div class="container">
+            <div class="about__inner">
+                <div class="about__left reveal">
+                    <img src="about-preview.jpg" alt="About Vintech" class="about__image" loading="lazy">
+                </div>
+                <div class="about__right reveal">
+                    <span class="section-label">About Vintech</span>
+                    <h2>Your Trusted Digital Partner</h2>
+                    <p>Vintech Digital Services was established under a simple observation: <strong>78% of businesses and SMEs in Africa struggle to build a strong online presence.</strong></p>
+                    <p>Without the right website, e-commerce store, or digital tools, most businesses waste time and money on efforts that don't convert.</p>
+                    <p>We help businesses like yours fix the digital leaks. From high-performing websites to custom certificate portals and digital solutions, we build systems that generate leads and grow your brand online.</p>
+                    <a href="#contact" class="btn btn--primary">Know More →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- STATS SECTION -->
+    <section class="stats-section" id="stats">
+        <div class="container">
+            <div class="stats__grid">
+                <div class="stat-card reveal">
+                    <i class="fas fa-code"></i>
+                    <span class="stat__num" data-count="95">0</span><span class="stat__plus">+</span>
+                    <p>Projects Delivered</p>
+                </div>
+                <div class="stat-card reveal">
+                    <i class="fas fa-chart-line"></i>
+                    <span class="stat__num" data-count="8">0</span><span class="stat__plus">+</span>
+                    <p>Industries Served</p>
+                </div>
+                <div class="stat-card reveal">
+                    <i class="fas fa-users"></i>
+                    <span class="stat__num" data-count="25">0</span><span class="stat__plus">+</span>
+                    <p>Happy Clients</p>
+                </div>
+                <div class="stat-card reveal">
+                    <i class="fas fa-calendar-alt"></i>
+                    <span class="stat__num" data-count="3">0</span><span class="stat__plus">+</span>
+                    <p>Years Experience</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES SECTION - Cards slide in from right -->
+    <section class="services section" id="services">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-label">What We Do</span>
+                <h2>Our Services</h2>
+                <p>End-to-end digital solutions tailored to your business needs</p>
+            </div>
+            <div class="services__grid">
+                <div class="service-card slide-right" data-delay="0">
+                    <div class="service-card__icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3>Business Website Development</h3>
+                    <p>Professional websites that represent your brand and attract the right customers around the clock.</p>
+                    <button class="service-card__arrow know-more-btn" data-service="Business Website Development">Know More →</button>
+                </div>
+                <div class="service-card slide-right" data-delay="100">
+                    <div class="service-card__icon">
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                    <h3>E-Commerce Store Development</h3>
+                    <p>Sell your products online with a fully functional, secure, and conversion-optimized store.</p>
+                    <button class="service-card__arrow know-more-btn" data-service="E-Commerce Store Development">Know More →</button>
+                </div>
+                <div class="service-card slide-right" data-delay="200">
+                    <div class="service-card__icon">
+                        <i class="fas fa-file-alt"></i>
+                    </div>
+                    <h3>Landing Page Design</h3>
+                    <p>High-converting pages built to turn visitors into paying customers and leads into sales.</p>
+                    <button class="service-card__arrow know-more-btn" data-service="Landing Page Design">Know More →</button>
+                </div>
+                <div class="service-card slide-right" data-delay="0">
+                    <div class="service-card__icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <h3>Certificate Generation Portal</h3>
+                    <p>Custom systems that automatically generate branded, professional certificates for your organization at scale.</p>
+                    <button class="service-card__arrow know-more-btn" data-service="Certificate Generation Portal">Know More →</button>
+                </div>
+                <div class="service-card slide-right" data-delay="100">
+                    <div class="service-card__icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Certificate Verification Portal</h3>
+                    <p>Secure certificate verification systems that eliminate fraud and protect your institution's integrity with unique identifiers.</p>
+                    <button class="service-card__arrow know-more-btn" data-service="Certificate Verification Portal">Know More →</button>
+                </div>
+                <div class="service-card slide-right" data-delay="200">
+                    <div class="service-card__icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>SEO Setup & Optimization</h3>
+                    <p>Get found on Google by the right people. We set up on-page SEO that drives real organic traffic.</p>
+                    <button class="service-card__arrow know-more-btn" data-service="SEO Setup & Optimization">Know More →</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CLIENT LOGO SLIDER -->
+    <section class="client-logos">
+        <div class="container">
+            <h2 class="logos-header reveal">Trusted by startups and established businesses alike</h2>
+            <div class="logo-slider">
+                <div class="logo-track">
+                    <img src="logo1.png" alt="Client 1" loading="lazy"> 
+                    <img src="logo2.png" alt="Client 2" loading="lazy"> 
+                    <img src="logo3.png" alt="Client 3" loading="lazy">
+                    <img src="logo4.png" alt="Client 4" loading="lazy"> 
+                    <img src="logo5.png" alt="Client 5" loading="lazy"> 
+                    <img src="logo6.png" alt="Client 6" loading="lazy">
+                    <img src="logo1.png" alt="Client 1" loading="lazy"> 
+                    <img src="logo2.png" alt="Client 2" loading="lazy"> 
+                    <img src="logo3.png" alt="Client 3" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHY CHOOSE US -->
+    <section class="why-choose-us" id="why">
+        <div class="wrap">
+            <div class="section-header reveal">
+                <h2>Why Businesses Choose Vintech</h2>
+                <p>We deliver exceptional value through proven methodologies and client-focused approaches.</p>
+            </div>
+            <div class="why-grid">
+                <div class="why-card reveal" data-delay="0">
+                    <div class="card-top-stroke"></div>
+                    <div class="why-icon"><i class="fas fa-chart-line"></i></div>
+                    <h4>Proven Results Focus</h4>
+                    <p>We prioritize measurable outcomes: increased leads, higher engagement, and improved conversion rates that directly impact your bottom line.</p>
+                </div>
+                <div class="why-card reveal" data-delay="100">
+                    <div class="card-top-stroke"></div>
+                    <div class="why-icon"><i class="fas fa-handshake"></i></div>
+                    <h4>Transparent Partnership</h4>
+                    <p>Clear pricing, honest communication, and collaborative processes ensure you're always informed and confident in our partnership.</p>
+                </div>
+                <div class="why-card reveal" data-delay="200">
+                    <div class="card-top-stroke"></div>
+                    <div class="why-icon"><i class="fas fa-bolt"></i></div>
+                    <h4>Rapid Response Support</h4>
+                    <p>Accessible via WhatsApp, calls, or email with prompt responses and efficient solutions to keep your projects moving forward seamlessly.</p>
+                </div>
+                <div class="why-card reveal" data-delay="300">
+                    <div class="card-top-stroke"></div>
+                    <div class="why-icon"><i class="fas fa-award"></i></div>
+                    <h4>Expert Team</h4>
+                    <p>Seasoned professionals with proven track records across diverse industries, delivering exceptional quality and innovative solutions.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PORTFOLIO SECTION -->
+    <section class="portfolio section" id="portfolio">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-label">Our Work</span>
+                <h2>Projects We've Delivered</h2>
+                <p>A selection of solutions built for real businesses and institutions</p>
+            </div>
+            <div class="portfolio__grid">
+                <div class="portfolio-card reveal" data-delay="0">
+                    <div class="portfolio-card__img">
+                        <img src="project1.jpg" alt="Certificate Generation System" loading="lazy">
+                        <div class="portfolio-card__overlay">
+                            <span class="portfolio-tag">Certificate Portal</span>
+                        </div>
+                    </div>
+                    <div class="portfolio-card__body">
+                        <h3>Certificate Generation System</h3>
+                        <p>Automated bulk certificate generation portal for a training institute — complete with custom branding and PDF export.</p>
+                        <a href="project1.html" class="portfolio-link-secondary">Learn more about this project →</a>
+                        <button class="portfolio-link enquire-btn" data-service="Certificate Generation Portal">Enquire about this →</button>
+                    </div>
+                </div>
+                <div class="portfolio-card reveal" data-delay="150">
+                    <div class="portfolio-card__img">
+                        <img src="project2.png" alt="Certificate Verification Portal" loading="lazy">
+                        <div class="portfolio-card__overlay">
+                            <span class="portfolio-tag">Verification System</span>
+                        </div>
+                    </div>
+                    <div class="portfolio-card__body">
+                        <h3>Certificate Verification Portal</h3>
+                        <p>Secure certificate verification system with unique identifiers that allows instant authentication of issued certificates to prevent fraud.</p>
+                        <a href="project2.html" class="portfolio-link-secondary">Learn more about this project →</a>
+                        <button class="portfolio-link enquire-btn" data-service="Certificate Verification Portal">Enquire about this →</button>
+                    </div>
+                </div>
+                <div class="portfolio-card reveal" data-delay="300">
+                    <div class="portfolio-card__img">
+                        <img src="project3.png" alt="Healthcare Website" loading="lazy">
+                        <div class="portfolio-card__overlay">
+                            <span class="portfolio-tag">Healthcare Website</span>
+                        </div>
+                    </div>
+                    <div class="portfolio-card__body">
+                        <h3>Healthcare & Nursing Services Website</h3>
+                        <p>Professional healthcare website for a nursing services brand with appointment booking, service showcase, and patient management features.</p>
+                        <a href="project3.html" class="portfolio-link-secondary">Learn more about this project →</a>
+                        <button class="portfolio-link enquire-btn" data-service="Healthcare Website">Enquire about this →</button>
+                    </div>
+                </div>
+                <div class="portfolio-card reveal" data-delay="450">
+                    <div class="portfolio-card__img">
+                        <img src="project4.png" alt="Learning Management System" loading="lazy">
+                        <div class="portfolio-card__overlay">
+                            <span class="portfolio-tag">LMS Platform</span>
+                        </div>
+                    </div>
+                    <div class="portfolio-card__body">
+                        <h3>Uduf Africa LMS & Certification Platform</h3>
+                        <p>Complete learning management system for an NGO where users learn and automatically generate certificates upon course completion.</p>
+                        <a href="project4.html" class="portfolio-link-secondary">Learn more about this project →</a>
+                        <button class="portfolio-link enquire-btn" data-service="LMS Platform">Enquire about this →</button>
+                    </div>
+                </div>
+            </div>
+            <div class="portfolio__more">
+                <a href="portfolio.html" class="btn btn--outline">See More Projects →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRICING TEASER -->
+    <section class="pricing-teaser section">
+        <div class="container">
+            <div class="pricing-teaser__inner reveal">
+                <div class="pricing-teaser__content">
+                    <span class="section-label">Pricing</span>
+                    <h2>Simple, Transparent Pricing</h2>
+                    <p>Flexible packages to match your needs and budget — no hidden charges. Choose from Starter, Business, or Premium plans designed for every business size.</p>
+                    <a href="pricing.html" class="btn btn--primary">View Pricing Plans →</a>
+                </div>
+                <div class="pricing-teaser__image">
+                    <img src="pricing-teaser.jpg" alt="Pricing Plans" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ SECTION -->
+    <section class="faq section">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-label">FAQ</span>
+                <h2>Frequently Asked Questions</h2>
+            </div>
+            <div class="faq__list">
+                <div class="faq-item reveal">
+                    <button class="faq-item__q">
+                        How long does it take to build a website?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-item__a">
+                        <p>Depending on the scope of the project, delivery typically takes between 5–14 working days. Larger projects like certificate portals may take longer, and we'll give you a clear timeline upfront.</p>
+                    </div>
+                </div>
+                <div class="faq-item reveal">
+                    <button class="faq-item__q">
+                        Do you offer support after the project is done?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-item__a">
+                        <p>Yes — every project comes with a post-launch support period. The duration depends on your package (1 month, 3 months, or 6 months). During this period we handle fixes, updates, and guidance.</p>
+                    </div>
+                </div>
+                <div class="faq-item reveal">
+                    <button class="faq-item__q">
+                        What do I need to provide to get started?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-item__a">
+                        <p>We'll need your business details, preferred style or references, content (text and images if available), and your logo. Don't worry if you don't have everything — we'll guide you through it.</p>
+                    </div>
+                </div>
+                <div class="faq-item reveal">
+                    <button class="faq-item__q">
+                        Can you redesign our existing website?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-item__a">
+                        <p>Absolutely. We handle full website revamps — from visual redesigns to complete rebuilds with improved speed, SEO, and mobile responsiveness.</p>
+                    </div>
+                </div>
+                <div class="faq-item reveal">
+                    <button class="faq-item__q">
+                        How does payment work?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-item__a">
+                        <p>We require a deposit to begin work, and the balance is due upon delivery. Exact payment terms are discussed and agreed upon at the start of every project.</p>
+                    </div>
+                </div>
+                <div class="faq-item reveal">
+                    <button class="faq-item__q">
+                        Who needs a certificate portal?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-item__a">
+                        <p>Any organization that issues certificates — training institutes, universities, corporate companies, NGOs, professional bodies, and event organizers. Our portals handle bulk generation, custom branding, and secure verification to prevent fraud.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="faq__more">
+                <a href="faq.html" class="btn btn--outline">View More Frequently Asked Questions →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section class="contact section" id="contact">
+        <div class="container">
+            <div class="contact__inner">
+                <div class="contact__left reveal">
+                    <span class="section-label">Get In Touch</span>
+                    <h2>Let's Build Something Great Together</h2>
+                    <p>Tell us about your project and we'll get back to you within 24 hours.</p>
+                    <div class="contact__details">
+                        <a href="mailto:vintechdigitalservices@gmail.com" class="contact-detail">
+                            <div class="contact-detail__icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <span>Email</span>
+                                <strong>vintechdigitalservices@gmail.com</strong>
+                            </div>
+                        </a>
+                        <a href="tel:+2348124022971" class="contact-detail">
+                            <div class="contact-detail__icon">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div>
+                                <span>Phone</span>
+                                <strong>08124022971</strong>
+                            </div>
+                        </a>
+                        <a href="https://wa.me/2348124022971" target="_blank" class="contact-detail">
+                            <div class="contact-detail__icon">
+                                <i class="fab fa-whatsapp"></i>
+                            </div>
+                            <div>
+                                <span>WhatsApp</span>
+                                <strong>Chat with us now</strong>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="contact__form-wrap reveal">
+                    <div class="contact__image">
+                        <img src="contact-image.jpg" alt="Contact Vintech" loading="lazy">
+                    </div>
+                    <form class="contact-form" id="feedbackForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Your Name</label>
+                                <input type="text" name="name" placeholder="John Doe" required />
+                            </div>
+                            <div class="form-group">
+                                <label>Email Address</label>
+                                <input type="email" name="email" placeholder="john@company.com" required />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Service Needed</label>
+                            <select name="service" required>
+                                <option value="" disabled selected>Select a service</option>
+                                <option>Business Website</option>
+                                <option>E-Commerce Store</option>
+                                <option>Landing Page</option>
+                                <option>Certificate Generation Portal</option>
+                                <option>Certificate Verification Portal</option>
+                                <option>Website Redesign</option>
+                                <option>SEO Setup</option>
+                                <option>Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Tell us about your project</label>
+                            <textarea name="message" placeholder="Briefly describe what you need and your timeline..." rows="4" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn--primary btn--full" id="feedbackSubmitBtn">
+                            Send Message
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                        <p class="form-note">We respond within 24 hours. No spam, ever.</p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<!-- FOOTER -->
+<footer>
+    <div class="footer-wrap">
+        <div class="col">
+            <div class="nav-logo">
+                <img src="logo.png" alt="VINTECH Logo" loading="lazy">
+            </div>
+            <p>Premium digital solutions that transform brands and drive measurable business growth.</p>
+            <p><i class="fas fa-phone"></i> <a href="tel:+2348124022971">+234 812 402 2971</a></p>
+            <p class="info-item"><i class="fas fa-location-dot"></i> <a href="#">Anambra State, Nigeria</a></p>
+            <p><i class="fas fa-envelope"></i> <a href="mailto:vintechdigitalservices@gmail.com">vintechdigitalservices@gmail.com</a></p>
+        </div>
+        <div class="col">
+            <h4>Quick Links</h4>
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="about.html">About Us</a>
+            <a href="packages.html">Service Packages</a>
+            <a href="academy.html">Digital Academy</a>
+            <a href="blogs.html">Blog</a>
+            <a href="#contact">Contact Us</a>
+        </div>
+        <div class="col">
+            <h4>Our Services</h4>
+            <div class="service-list">
+                <p>Website Development</p>
+                <p>E-Commerce Stores</p>
+                <p>Certificate Portals</p>
+                <p>SEO Optimization</p>
+                <p>Landing Pages</p>
+            </div>
+        </div>
+        <div class="col">
+            <h4>Connect With Us</h4>
+            <div class="social-icons">
+                <a href="https://wa.me/2348124022971" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                <a href="https://www.facebook.com/share/1DBb1LC5XD/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/vintechdigitalservices?igsh=MXgyOTZneHVwODMwaQ==" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.tiktok.com/@vintech.digital.s?_r=1&_t=ZS-91PyPIfnPF4" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <div class="legal-links">
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="terms.html">Terms of Service</a>
+        </div>
+        <div class="copyright">
+            © 2025 Vintech Digital Services. All rights reserved.
+        </div>
+    </div>
+</footer>
+
+<!-- SERVICE MODAL FORM -->
+<div class="modal" id="serviceModal">
+    <div class="modal__content">
+        <span class="modal__close">&times;</span>
+        <h2>Request a Quote</h2>
+        <p>Service: <strong id="selectedService"></strong></p>
+        <form id="hireForm">
+            <div><label>Full Name *</label><input type="text" name="fullName" required></div>
+            <div><label>Phone *</label><input type="tel" name="phoneNumber" required></div>
+            <div><label>Email *</label><input type="email" name="email" required></div>
+            <div><label>Business Name *</label><input type="text" name="businessName" required></div>
+            <div>
+                <label>Type of Business *</label>
+                <select id="businessType" name="businessType" required>
+                    <option value="" disabled selected>Select business type</option>
+                    <option value="ecommerce">E-commerce</option>
+                    <option value="service">Service</option>
+                    <option value="tech">Tech</option>
+                    <option value="education">Education</option>
+                    <option value="fitness">Physical Fitness</option>
+                    <option value="food">Food & Beverage</option>
+                    <option value="fashion">Fashion</option>
+                    <option value="beauty">Beauty</option>
+                    <option value="real-estate">Real Estate</option>
+                    <option value="entertainment">Entertainment</option>
+                    <option value="travel">Travel & Tourism</option>
+                    <option value="finance">Finance</option>
+                    <option value="consulting">Consulting</option>
+                    <option value="transport">Transportation</option>
+                    <option value="healthcare">Healthcare</option>
+                    <option value="home-services">Home Services</option>
+                    <option value="marketing">Marketing</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+            <div id="otherBusinessTypeWrapper" style="display:none;">
+                <label>Specify Business Type *</label>
+                <input type="text" id="otherBusinessType" name="otherBusinessType" placeholder="e.g. Logistics">
+            </div>
+            <div>
+                <label>Service Needed *</label>
+                <select id="serviceSelect" name="serviceNeeded" required>
+                    <option value="" disabled selected>Select a service</option>
+                    <option>Business Website Development</option>
+                    <option>E-Commerce Store Development</option>
+                    <option>Landing Page Design</option>
+                    <option>Certificate Generation Portal</option>
+                    <option>Certificate Verification Portal</option>
+                    <option>SEO Setup & Optimization</option>
+                </select>
+            </div>
+            <div>
+                <label>Your Message *</label>
+                <textarea name="message" rows="4" placeholder="Tell us about your project requirements..." required></textarea>
+            </div>
+            <button type="submit" id="submitBtn" class="btn btn--primary btn--full">Submit Request</button>
+        </form>
+    </div>
+</div>
+
+<!-- GLOBAL CTA BUTTON -->
+<div id="global-cta">
+    <div id="cta-main" class="ringing">
+        <i class="fas fa-phone-alt"></i>
+    </div>
+    <div id="cta-options">
+        <a href="strategy.html" class="cta-option">📅 Book Free Strategy Session</a>
+        <a href="https://wa.me/2348124022971?text=Hello%20Vintech%20Digital%20Services%2C%20I%20got%20your%20contact%20info%20from%20your%20website%20and%20I'm%20interested%20in%20your%20services." target="_blank" class="cta-option">💬 Chat Our Team</a>
+        <a href="tel:+2348124022971" class="cta-option">📞 Call Us Now</a>
+        <a href="faq.html" class="cta-option">❓ FAQs</a>
+        <a href="#contact" class="cta-option">📝 Drop Feedback</a>
+    </div>
+</div>
+
+<script type="module" src="script.js"></script>
+</body>
+</html>

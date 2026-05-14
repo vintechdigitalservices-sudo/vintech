@@ -1,0 +1,1030 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-5V5S8TT3');</script>
+    <!-- End Google Tag Manager -->
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="logo1.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="logo1.png">
+    
+    <title>Contact Us | Vintech Digital Services</title>
+    <meta name="description" content="Get in touch with Vintech Digital Services. Let's discuss your web development, e-commerce, or certificate portal project.">
+    <meta name="robots" content="index, follow">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    
+    <!-- Firebase SDK -->
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+        import { getFirestore, collection, addDoc, serverTimestamp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
+        
+        const firebaseConfig = {
+            apiKey: "AIzaSyBBZfUSIlJKUaHV05t-x1B4J-cXQJtcXEs",
+            authDomain: "vintech-backend.firebaseapp.com",
+            projectId: "vintech-backend",
+            storageBucket: "vintech-backend.firebasestorage.app",
+            messagingSenderId: "891897245100",
+            appId: "1:891897245100:web:9f935a6337831c5a649e09"
+        };
+        
+        const app = initializeApp(firebaseConfig);
+        const db = getFirestore(app);
+        
+        window.db = db;
+        window.collection = collection;
+        window.addDoc = addDoc;
+        window.serverTimestamp = serverTimestamp;
+    </script>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #ffffff;
+            color: #001F54;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        /* Container */
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        /* Header */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.98);
+            padding: 5px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        .logo img {
+            height: 56px;
+            width: auto;
+        }
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+            align-items: center;
+        }
+        .nav-menu a {
+            text-decoration: none;
+            color: #475569;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.3s;
+        }
+        .nav-menu a:hover {
+            color: #e67e22;
+        }
+        .btn-contact {
+            background: #e67e22;
+            color: #fff !important;
+            padding: 8px 20px;
+            border-radius: 4px;
+        }
+        .mobile-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            z-index: 1001;
+        }
+        .mobile-toggle span {
+            width: 25px;
+            height: 3px;
+            background: #001F54;
+            border-radius: 2px;
+            transition: 0.3s;
+        }
+        
+        /* Mobile Drawer Navigation */
+        .nav-drawer {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 85%;
+            max-width: 320px;
+            height: 100%;
+            background: #001F54;
+            z-index: 1002;
+            transition: right 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            padding: 30px 25px;
+            display: flex;
+            flex-direction: column;
+            box-shadow: -5px 0 30px rgba(0, 0, 0, 0.3);
+        }
+        .nav-drawer.open { right: 0; }
+        .drawer-header { display: flex; justify-content: flex-end; margin-bottom: 40px; }
+        .drawer-close {
+            background: rgba(255,255,255,0.1);
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: background 0.3s;
+            color: white;
+            font-size: 1.2rem;
+        }
+        .drawer-close:hover { background: #e67e22; }
+        .drawer-logo { text-align: center; margin-bottom: 40px; }
+        .drawer-logo img { height: 60px; width: auto; }
+        .drawer-nav { flex: 1; }
+        .drawer-nav ul { list-style: none; padding: 0; }
+        .drawer-nav li { margin-bottom: 25px; }
+        .drawer-nav a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: 500;
+            display: block;
+            padding: 8px 0;
+            transition: color 0.3s, transform 0.2s;
+        }
+        .drawer-nav a:hover { color: #e67e22; transform: translateX(5px); }
+        .drawer-contact { margin-top: auto; padding-top: 30px; border-top: 1px solid rgba(255,255,255,0.1); }
+        .drawer-contact .drawer-btn {
+            display: block;
+            background: #e67e22;
+            color: #ffffff;
+            text-align: center;
+            padding: 14px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background 0.3s;
+        }
+        .drawer-contact .drawer-btn:hover { background: #d35400; }
+        .drawer-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1001;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s, visibility 0.3s;
+        }
+        .drawer-overlay.active { opacity: 1; visibility: visible; }
+        
+        /* Page Hero */
+        .page-hero {
+            background: linear-gradient(135deg, #001F54 0%, #001338 100%);
+            padding: 140px 0 60px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            margin-top: 70px;
+        }
+        .page-hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 80%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(230,126,34,0.08) 0%, transparent 70%);
+            animation: float 20s ease-in-out infinite;
+        }
+        @keyframes float {
+            0%, 100% { transform: translate(0, 0); }
+            50% { transform: translate(-20px, -20px); }
+        }
+        .page-hero h1 {
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 800;
+            color: #ffffff;
+            margin-bottom: 15px;
+            animation: slideDown 0.8s ease;
+        }
+        .page-hero p {
+            font-size: 1rem;
+            color: #cbd5e1;
+            max-width: 500px;
+            margin: 0 auto;
+            animation: slideUp 0.8s ease 0.2s forwards;
+            opacity: 0;
+            animation-fill-mode: forwards;
+        }
+        @keyframes slideDown {
+            from { opacity: 0; transform: translateY(-30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        /* Contact Section */
+        .contact-section {
+            padding: 80px 0;
+            background: #ffffff;
+        }
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 60px;
+            align-items: start;
+        }
+        
+        /* Contact Info Cards */
+        .contact-info h2 {
+            font-size: clamp(1.5rem, 3vw, 2rem);
+            font-weight: 800;
+            margin: 15px 0 20px;
+            color: #001F54;
+        }
+        .contact-info > p {
+            color: #64748b;
+            margin-bottom: 35px;
+            line-height: 1.7;
+        }
+        .info-cards {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .info-card {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+            padding: 20px;
+            background: #f8fafc;
+            border-radius: 16px;
+            text-decoration: none;
+            transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            border: 1px solid #e2e8f0;
+            position: relative;
+            overflow: hidden;
+        }
+        .info-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(230,126,34,0.1), transparent);
+            transition: left 0.5s;
+        }
+        .info-card:hover {
+            transform: translateX(8px);
+            border-color: #e67e22;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        .info-card:hover::before {
+            left: 100%;
+        }
+        .card-icon {
+            width: 55px;
+            height: 55px;
+            background: rgba(230,126,34,0.1);
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s;
+        }
+        .info-card:hover .card-icon {
+            background: #e67e22;
+            transform: scale(1.05);
+        }
+        .card-icon i {
+            font-size: 24px;
+            color: #e67e22;
+            transition: color 0.3s;
+        }
+        .info-card:hover .card-icon i {
+            color: #ffffff;
+        }
+        .card-content span {
+            font-size: 0.7rem;
+            color: #94a3b8;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+        }
+        .card-content strong {
+            display: block;
+            font-size: 1rem;
+            font-weight: 700;
+            color: #001F54;
+            margin-top: 4px;
+        }
+        .card-content p {
+            font-size: 0.8rem;
+            color: #64748b;
+            margin-top: 4px;
+        }
+        
+        /* Form Wrapper */
+        .form-wrapper {
+            background: #ffffff;
+            border-radius: 24px;
+            padding: 35px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+            border: 1px solid #e2e8f0;
+            transition: all 0.4s;
+            animation: fadeInUp 0.8s ease;
+        }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .form-wrapper:hover {
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.12);
+        }
+        .contact-image {
+            margin-bottom: 25px;
+            border-radius: 16px;
+            overflow: hidden;
+        }
+        .contact-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.5s;
+        }
+        .contact-image:hover img {
+            transform: scale(1.02);
+        }
+        
+        /* Form Styles */
+        .form-group {
+            margin-bottom: 20px;
+            position: relative;
+        }
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 14px 16px;
+            border: 1.5px solid #e2e8f0;
+            border-radius: 12px;
+            font-size: 0.95rem;
+            font-family: 'Inter', sans-serif;
+            transition: all 0.3s;
+            background: #f8fafc;
+            outline: none;
+        }
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            border-color: #e67e22;
+            box-shadow: 0 0 0 3px rgba(230,126,34,0.1);
+            background: #ffffff;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            font-size: 0.85rem;
+            color: #334155;
+        }
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+        textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+        
+        /* Submit Button */
+        .submit-btn {
+            width: 100%;
+            padding: 16px;
+            background: #e67e22;
+            color: #ffffff;
+            border: none;
+            border-radius: 12px;
+            font-size: 1rem;
+            font-weight: 700;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            transition: all 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+        .submit-btn::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.3);
+            transform: translate(-50%, -50%);
+            transition: width 0.6s, height 0.6s;
+        }
+        .submit-btn:hover::before {
+            width: 300px;
+            height: 300px;
+        }
+        .submit-btn:hover {
+            background: #d35400;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(230,126,34,0.3);
+        }
+        .submit-btn:active {
+            transform: translateY(0);
+        }
+        .submit-btn i {
+            transition: transform 0.3s;
+        }
+        .submit-btn:hover i {
+            transform: translateX(5px);
+        }
+        .submit-btn.loading {
+            opacity: 0.7;
+            cursor: not-allowed;
+        }
+        .submit-btn.loading i {
+            animation: spin 1s linear infinite;
+        }
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+        
+        .form-note {
+            text-align: center;
+            font-size: 0.75rem;
+            color: #94a3b8;
+            margin-top: 20px;
+        }
+        .form-note i {
+            margin-right: 5px;
+        }
+        
+        /* Footer - Services as plain text */
+        footer {
+            background: #001338;
+            color: #ffffff;
+            padding: 60px 5% 30px;
+        }
+        .footer-wrap {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 50px;
+        }
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        .nav-logo img {
+            height: 45px;
+            width: auto;
+        }
+        .nav-logo span {
+            font-size: 1.3rem;
+            font-weight: 700;
+        }
+        .col p {
+            font-size: 0.9rem;
+            line-height: 1.6;
+            opacity: 0.85;
+            margin-bottom: 12px;
+        }
+        .col p i {
+            width: 25px;
+            color: #e67e22;
+        }
+        .col p a {
+            color: #ffffff;
+            text-decoration: none;
+        }
+        .col h4 {
+            font-size: 1rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: #e67e22;
+        }
+        .col a {
+            display: block;
+            color: #ffffff;
+            text-decoration: none;
+            margin-bottom: 12px;
+            font-size: 0.9rem;
+            opacity: 0.8;
+            transition: all 0.3s;
+        }
+        .col a:hover {
+            opacity: 1;
+            transform: translateX(5px);
+        }
+        .service-list p {
+            margin-bottom: 8px;
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+        .service-list p:hover {
+            opacity: 1;
+        }
+        .social-icons {
+            display: flex;
+            gap: 15px;
+            margin-top: 15px;
+            justify-content: center;
+        }
+        .social-icons a {
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0;
+        }
+        .social-icons a i {
+            font-size: 1.2rem;
+        }
+        .social-icons a:hover {
+            background: #e67e22;
+            transform: translateY(-3px);
+        }
+        .footer-bottom {
+            max-width: 1200px;
+            margin: 40px auto 0;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 10px;
+            text-align: center;
+        }
+        .legal-links {
+            display: flex;
+            gap: 18px;
+            justify-content: center;
+        }
+        .legal-links a {
+            font-size: 0.8rem;
+            color: #ffffff;
+            opacity: 0.7;
+            text-decoration: none;
+        }
+        .legal-links a:hover {
+            opacity: 1;
+        }
+        .copyright {
+            font-size: 0.8rem;
+            opacity: 0.7;
+            text-align: center;
+        }
+        
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .contact-grid {
+                gap: 40px;
+            }
+        }
+        @media (max-width: 768px) {
+            .mobile-toggle { display: flex; }
+            .nav-menu { display: none; }
+            .page-hero { margin-top: 70px; padding: 120px 0 50px; }
+            .contact-grid { grid-template-columns: 1fr; gap: 50px; }
+            .footer-wrap { grid-template-columns: 1fr; text-align: center; }
+            .nav-logo { justify-content: center; }
+            .social-icons { justify-content: center; }
+            .footer-bottom { flex-direction: column; align-items: center; }
+            .legal-links { justify-content: center; }
+            .form-row { grid-template-columns: 1fr; gap: 0; }
+        }
+        
+        /* Section Label */
+        .section-label {
+            display: inline-block;
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: #e67e22;
+            background: rgba(230, 126, 34, 0.1);
+            padding: 5px 12px;
+            border-radius: 100px;
+        }
+        
+        /* Highlight */
+        .highlight {
+            color: #e67e22;
+        }
+        
+        /* Scroll Reveal Animation */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5V5S8TT3"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<!-- Drawer Overlay -->
+<div class="drawer-overlay" id="drawerOverlay"></div>
+
+<!-- Mobile Drawer Navigation -->
+<div class="nav-drawer" id="navDrawer">
+    <div class="drawer-header">
+        <button class="drawer-close" id="drawerClose"><i class="fas fa-times"></i></button>
+    </div>
+    <div class="drawer-logo">
+        <img src="logo.png" alt="Vintech Digital Services">
+    </div>
+    <div class="drawer-nav">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="blogs.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+    <div class="drawer-contact">
+        <a href="contact.html" class="drawer-btn">Get a Quote</a>
+    </div>
+</div>
+
+<!-- HEADER -->
+<header>
+    <div class="logo">
+        <img src="logo.png" alt="Vintech Digital Services Logo">
+    </div>
+    <nav>
+        <ul class="nav-menu" id="navMenu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="index.html#services">Services</a></li>
+            <li><a href="index.html#why">Why Us</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="blogs.html">Blog</a></li>
+            <li><a href="contact.html" class="btn-contact">Contact</a></li>
+        </ul>
+    </nav>
+    <div class="mobile-toggle" id="mobileToggle">
+        <span></span><span></span><span></span>
+    </div>
+</header>
+
+<main>
+    <!-- PAGE HERO -->
+    <section class="page-hero">
+        <div class="container">
+            <h1>Get In Touch</h1>
+            <p>We'd love to hear from you. Let's discuss your next project.</p>
+        </div>
+        <div class="scroll-indicator" onclick="document.querySelector('.contact-section').scrollIntoView({behavior: 'smooth'})">
+            <span>Scroll</span>
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-grid">
+                <!-- Left Side - Contact Info -->
+                <div class="contact-info reveal">
+                    <span class="section-label">Contact Us</span>
+                    <h2>Let's <span class="highlight">Build</span> Something Great Together</h2>
+                    <p>Have a project in mind? Looking for a quote? Fill out the form and we'll get back to you within 24 hours.</p>
+                    
+                    <div class="info-cards">
+                        <!-- Email Card -->
+                        <a href="mailto:vintechdigitalservices@gmail.com" class="info-card">
+                            <div class="card-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="card-content">
+                                <span>Email Us</span>
+                                <strong>vintechdigitalservices@gmail.com</strong>
+                                <p>We respond within 24 hours</p>
+                            </div>
+                        </a>
+                        
+                        <!-- Phone Card -->
+                        <a href="tel:+2348124022971" class="info-card">
+                            <div class="card-icon">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div class="card-content">
+                                <span>Call Us</span>
+                                <strong>08124022971</strong>
+                                <p>Mon-Fri, 9am - 6pm</p>
+                            </div>
+                        </a>
+                        
+                        <!-- WhatsApp Card -->
+                        <a href="https://wa.me/2348124022971?text=Hello%20Vintech%20Digital%20Services%2C%20I%20got%20your%20contact%20info%20from%20your%20website%20and%20I'm%20interested%20in%20your%20services." target="_blank" class="info-card">
+                            <div class="card-icon">
+                                <i class="fab fa-whatsapp"></i>
+                            </div>
+                            <div class="card-content">
+                                <span>WhatsApp</span>
+                                <strong>Chat with us instantly</strong>
+                                <p>Quick responses, 7 days a week</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Right Side - Contact Form -->
+                <div class="form-wrapper reveal">
+                    <div class="contact-image">
+                        <img src="contact-image.jpg" alt="Contact Vintech Digital Services" loading="lazy">
+                    </div>
+                    
+                    <form id="contactForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Full Name *</label>
+                                <input type="text" name="fullName" placeholder="John Doe" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Email Address *</label>
+                                <input type="email" name="email" placeholder="john@company.com" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Phone Number *</label>
+                                <input type="tel" name="phone" placeholder="08123456789" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Business Name</label>
+                                <input type="text" name="businessName" placeholder="Your Business Name">
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Service Needed *</label>
+                            <select name="service" required>
+                                <option value="" disabled selected>Select a service</option>
+                                <option>Business Website Development</option>
+                                <option>E-Commerce Store Development</option>
+                                <option>Landing Page Design</option>
+                                <option>Certificate Generation Portal</option>
+                                <option>Certificate Verification Portal</option>
+                                <option>Website Redesign</option>
+                                <option>SEO Setup & Optimization</option>
+                                <option>Other</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Your Message *</label>
+                            <textarea name="message" placeholder="Please describe your project requirements..." required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="submit-btn" id="submitBtn">
+                            <span>Send Message</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                        <p class="form-note">
+                            <i class="fas fa-lock"></i> Your information is safe with us. No spam, ever.
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<!-- FOOTER -->
+<footer>
+    <div class="footer-wrap">
+        <div class="col">
+            <div class="nav-logo">
+                <img src="logo.png" alt="VINTECH Logo">
+                <span>VINTECH</span>
+            </div>
+            <p>Premium digital solutions that transform brands and drive measurable business growth.</p>
+            <p><i class="fas fa-phone"></i> <a href="tel:+2348124022971">+234 812 402 2971</a></p>
+            <p><i class="fas fa-envelope"></i> <a href="mailto:vintechdigitalservices@gmail.com">vintechdigitalservices@gmail.com</a></p>
+        </div>
+        <div class="col">
+            <h4>Quick Links</h4>
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            
+            <a href="portfolio.html">Portfolio</a>
+            <a href="blogs.html">Blog</a>
+            <a href="contact.html">Contact Us</a>
+        </div>
+        <div class="col">
+            <h4>Our Services</h4>
+            <div class="service-list">
+                <p>Website Development</p>
+                <p>E-Commerce Stores</p>
+                <p>Certificate Portals</p>
+                <p>SEO Optimization</p>
+                <p>Landing Pages</p>
+            </div>
+        </div>
+        <div class="col">
+            <h4>Connect With Us</h4>
+            <div class="social-icons">
+                <a href="https://wa.me/2348124022971" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                <a href="https://www.facebook.com/share/1DBb1LC5XD/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/vintechdigitalservices?igsh=MXgyOTZneHVwODMwaQ==" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.tiktok.com/@vintech.digital.s?_r=1&_t=ZS-91PyPIfnPF4" target="_blank"><i class="fab fa-tiktok"></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <div class="legal-links">
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="terms.html">Terms of Service</a>
+        </div>
+        <div class="copyright">
+            © 2025 Vintech Digital Services. All rights reserved.
+        </div>
+    </div>
+</footer>
+
+<script type="module">
+    // Mobile Drawer Functions
+    const mobileToggleBtn = document.getElementById('mobileToggle');
+    const navDrawer = document.getElementById('navDrawer');
+    const drawerOverlay = document.getElementById('drawerOverlay');
+    const drawerCloseBtn = document.getElementById('drawerClose');
+    
+    function openDrawer() {
+        navDrawer.classList.add('open');
+        drawerOverlay.classList.add('active');
+        document.body.style.overflow = 'hidden';
+        if (mobileToggleBtn) mobileToggleBtn.classList.add('active');
+    }
+    
+    function closeDrawer() {
+        navDrawer.classList.remove('open');
+        drawerOverlay.classList.remove('active');
+        document.body.style.overflow = '';
+        if (mobileToggleBtn) mobileToggleBtn.classList.remove('active');
+    }
+    
+    if (mobileToggleBtn) {
+        mobileToggleBtn.addEventListener('click', openDrawer);
+    }
+    if (drawerCloseBtn) {
+        drawerCloseBtn.addEventListener('click', closeDrawer);
+    }
+    if (drawerOverlay) {
+        drawerOverlay.addEventListener('click', closeDrawer);
+    }
+    document.querySelectorAll('.drawer-nav a').forEach(link => {
+        link.addEventListener('click', closeDrawer);
+    });
+    
+    // Original menu toggle for backward compatibility
+    const mobileToggle = document.getElementById('mobileToggle');
+    const navMenu = document.getElementById('navMenu');
+    
+    if (mobileToggle) {
+        mobileToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            mobileToggle.classList.toggle('active');
+            if (navMenu.classList.contains('active')) {
+                document.body.style.overflow = 'hidden';
+            } else {
+                document.body.style.overflow = '';
+            }
+        });
+    }
+    
+    document.querySelectorAll('.nav-menu a').forEach(link => {
+        link.addEventListener('click', () => {
+            navMenu.classList.remove('active');
+            if (mobileToggle) mobileToggle.classList.remove('active');
+            document.body.style.overflow = '';
+        });
+    });
+    
+    // Scroll Reveal Animation
+    const revealElements = document.querySelectorAll('.reveal');
+    
+    const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                revealObserver.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.15 });
+    
+    revealElements.forEach(el => revealObserver.observe(el));
+    
+    // Firebase references from window
+    const db = window.db;
+    const collection = window.collection;
+    const addDoc = window.addDoc;
+    const serverTimestamp = window.serverTimestamp;
+    
+    // Form Submission
+    const form = document.getElementById('contactForm');
+    const submitBtn = document.getElementById('submitBtn');
+    
+    if (form) {
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            // Disable button and show loading state
+            submitBtn.disabled = true;
+            submitBtn.classList.add('loading');
+            submitBtn.querySelector('span').textContent = 'Sending...';
+            submitBtn.querySelector('i').className = 'fas fa-spinner';
+            
+            try {
+                const formData = new FormData(form);
+                const data = Object.fromEntries(formData.entries());
+                data.createdAt = serverTimestamp();
+                data.pageSource = 'contact.html';
+                data.submittedAt = new Date().toISOString();
+                
+                await addDoc(collection(db, "feedbacks"), data);
+                
+                // Redirect to thanks.html on success
+                window.location.href = "thanks.html";
+                
+            } catch (error) {
+                console.error('Submission error:', error);
+                alert('Failed to send message. Please try again or contact us directly via phone/WhatsApp.');
+                
+                // Reset button
+                submitBtn.disabled = false;
+                submitBtn.classList.remove('loading');
+                submitBtn.querySelector('span').textContent = 'Send Message';
+                submitBtn.querySelector('i').className = 'fas fa-paper-plane';
+            }
+        });
+    }
+    
+    // Add hover animation to cards
+    const cards = document.querySelectorAll('.info-card');
+    cards.forEach(card => {
+        card.addEventListener('mouseenter', () => {
+            card.style.transition = 'all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
+        });
+    });
+</script>
+</body>
+</html>
